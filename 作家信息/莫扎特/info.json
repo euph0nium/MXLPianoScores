@@ -1,0 +1,69 @@
+{
+  "id": "mozart",
+  "name": "沃尔夫冈·阿玛多伊斯·莫扎特",
+  "original_name": "Wolfgang Amadeus Mozart",
+  "short_name": "莫扎特",
+  "birth_year": 1756,
+  "death_year": 1791,
+  "nationality": "奥地利",
+  "period": "维也纳古典乐派 (Classical)",
+  "title": "音乐神童 (The Musical Genius)",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "KernScores/mozart",
+    "Sonatinas/Mozart"
+  ],
+  "bio_short": "欧洲古典主义音乐巅峰代表，人类历史上无与伦比的音乐天才。其音乐纯净典雅、旋律宛若天籁，在钢琴奏鸣曲、协奏曲与歌剧领域均达至臻之境。",
+  "bio_full": "莫扎特出生于奥地利萨尔茨堡，4岁开始作曲，自幼随父亲巡演全欧，展现出震古烁今的音乐早慧。在短暂而辉煌的35年生命中，莫扎特留下了600多部涵盖所有体裁的旷世杰作。莫扎特的钢琴作品结构严谨对称、织体明澈透亮，看似清丽流畅、无拘无束，实则蕴含极高的歌唱性与细腻复杂的情感张力。他的音乐被后世誉为‘降临人间的纯净阳光’。",
+  "masterpieces": [
+    {
+      "title": "A大调第十一钢琴奏鸣曲 (含「土耳其进行曲」)",
+      "genre": "Piano Sonata",
+      "opus": "K.331",
+      "key": "A major"
+    },
+    {
+      "title": "C大调第十六钢琴奏鸣曲 (易懂的奏鸣曲)",
+      "genre": "Piano Sonata",
+      "opus": "K.545",
+      "key": "C major"
+    },
+    {
+      "title": "F大调第十二钢琴奏鸣曲",
+      "genre": "Piano Sonata",
+      "opus": "K.332",
+      "key": "F major"
+    },
+    {
+      "title": "d小调幻想曲",
+      "genre": "Fantasia",
+      "opus": "K.397",
+      "key": "D minor"
+    },
+    {
+      "title": "c小调幻想曲",
+      "genre": "Fantasia",
+      "opus": "K.475",
+      "key": "C minor"
+    },
+    {
+      "title": "c小调第十四钢琴奏鸣曲",
+      "genre": "Piano Sonata",
+      "opus": "K.457",
+      "key": "C minor"
+    },
+    {
+      "title": "小星星变奏曲",
+      "genre": "Variations",
+      "opus": "K.265",
+      "key": "C major"
+    },
+    {
+      "title": "C大调小奏鸣曲",
+      "genre": "Sonatina",
+      "opus": "K.545",
+      "key": "C major"
+    }
+  ]
+}

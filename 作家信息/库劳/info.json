@@ -1,0 +1,56 @@
+{
+  "id": "kuhlau",
+  "name": "弗里德里希·库劳",
+  "original_name": "Friedrich Daniel Rudolf Kuhlau",
+  "short_name": "库劳",
+  "birth_year": 1786,
+  "death_year": 1832,
+  "nationality": "德国 / 丹麦",
+  "period": "古典主义向早期浪漫主义过渡",
+  "title": "小奏鸣曲名家 / 长笛贝多芬",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "Sonatinas/Kuhlau"
+  ],
+  "bio_short": "德裔丹麦古典浪漫主义作曲家。其《小奏鸣曲集》(Op.20, Op.55) 清新明朗、织体工整，是全球钢琴教育界与克莱门蒂齐名的小奏鸣曲大师。",
+  "bio_full": "库劳早年在汉堡学习音乐，后定居哥本哈根并成为丹麦宫廷作曲家。他曾与贝多芬私交甚笃并深受其启发。库劳的小奏鸣曲（如 Op.20、Op.55、Op.59）旋律活泼纯净、技术难度适中、曲式严谨清晰，充满歌唱性的欢快主题，是钢琴学子从初级进阶到中高级古典奏鸣曲不可或缺的基石文献。",
+  "masterpieces": [
+    {
+      "title": "C大调小奏鸣曲 第一乐章快板",
+      "genre": "Sonatina",
+      "opus": "Op.20 No.1",
+      "key": "C major"
+    },
+    {
+      "title": "G大调小奏鸣曲",
+      "genre": "Sonatina",
+      "opus": "Op.20 No.2",
+      "key": "G major"
+    },
+    {
+      "title": "F大调小奏鸣曲",
+      "genre": "Sonatina",
+      "opus": "Op.20 No.3",
+      "key": "F major"
+    },
+    {
+      "title": "C大调小奏鸣曲",
+      "genre": "Sonatina",
+      "opus": "Op.55 No.1",
+      "key": "C major"
+    },
+    {
+      "title": "G大调小奏鸣曲",
+      "genre": "Sonatina",
+      "opus": "Op.55 No.2",
+      "key": "G major"
+    },
+    {
+      "title": "C大调小奏鸣曲",
+      "genre": "Sonatina",
+      "opus": "Op.55 No.3",
+      "key": "C major"
+    }
+  ]
+}

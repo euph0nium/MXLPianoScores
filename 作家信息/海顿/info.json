@@ -1,0 +1,56 @@
+{
+  "id": "haydn",
+  "name": "约瑟夫·海顿",
+  "original_name": "Franz Joseph Haydn",
+  "short_name": "海顿",
+  "birth_year": 1732,
+  "death_year": 1809,
+  "nationality": "奥地利",
+  "period": "维也纳古典乐派 (Classical)",
+  "title": "交响乐之父 / 弦乐四重奏之父",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "KernScores/haydn"
+  ],
+  "bio_short": "维也纳古典乐派奠基人，被尊称为‘交响乐之父’与‘海顿爸爸’。确立了古典主义奏鸣曲式结构，其键盘奏鸣曲洋溢着风趣、幽默与均衡之美。",
+  "bio_full": "海顿在埃斯特哈齐家族担任乐长近三十年，在长期的乐团实践中探索并奠定了交响曲、弦乐四重奏以及古典钢琴奏鸣曲的标准曲式框架。海顿不仅启发并指导了年轻的莫扎特与贝多芬，更以其乐观豁达、生动风趣的音乐性格为世人所爱。他的60余首键盘奏鸣曲构思精巧、充满民间音乐的质朴欢快与机智巧思，是古典键盘艺术不可或缺的基石。",
+  "masterpieces": [
+    {
+      "title": "D大调键盘奏鸣曲",
+      "genre": "Keyboard Sonata",
+      "opus": "Hob. XVI:37",
+      "key": "D major"
+    },
+    {
+      "title": "e小调键盘奏鸣曲",
+      "genre": "Keyboard Sonata",
+      "opus": "Hob. XVI:34",
+      "key": "E minor"
+    },
+    {
+      "title": "C大调键盘奏鸣曲",
+      "genre": "Keyboard Sonata",
+      "opus": "Hob. XVI:35",
+      "key": "C major"
+    },
+    {
+      "title": "降E大调第五十二键盘奏鸣曲",
+      "genre": "Keyboard Sonata",
+      "opus": "Hob. XVI:52",
+      "key": "E-flat major"
+    },
+    {
+      "title": "f小调行板与变奏曲",
+      "genre": "Variations",
+      "opus": "Hob. XVII:6",
+      "key": "F minor"
+    },
+    {
+      "title": "吉普赛回旋曲",
+      "genre": "Rondo",
+      "opus": "Hob. XV:25",
+      "key": "G major"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "grieg",
+  "name": "爱德华·格里格",
+  "original_name": "Edvard Hagerup Grieg",
+  "short_name": "格里格",
+  "birth_year": 1843,
+  "death_year": 1907,
+  "nationality": "挪威",
+  "period": "民族乐派 / 浪漫主义时期",
+  "title": "北欧肖邦 / 挪威民族音乐之魂",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "Grieg_Lyric_Pieces"
+  ],
+  "bio_short": "挪威民族乐派奠基人，以清丽脱俗、散发着北欧峡湾与森林气息的旋律闻名，其10卷《抒情小品集》(Lyric Pieces) 是浪漫主义钢琴小品之瑰宝。",
+  "bio_full": "格里格毕业于莱比锡音乐学院，随后致力于发掘挪威民间传说、民歌调式与峡湾壮丽自然风光中的艺术灵感。他的音乐清新纯净、和声大胆新颖，对后来的印象主义音乐产生了先导性启示。格里格一生共创作了 10 卷共 66 首《抒情小品集》(Lyric Pieces)，包括著名的《致春天》、《蝴蝶》、《特罗尔德豪根的婚礼日》、《挪威舞曲》等，将北欧大自然的纯净风情化作极度洗练优美的钢琴音诗。",
+  "masterpieces": [
+    {
+      "title": "致春天 (To Spring, 选自抒情小品集)",
+      "genre": "Lyric Piece",
+      "opus": "Op.43 No.6",
+      "key": "F-sharp major"
+    },
+    {
+      "title": "蝴蝶 (Butterfly, 选自抒情小品集)",
+      "genre": "Lyric Piece",
+      "opus": "Op.43 No.1",
+      "key": "A major"
+    },
+    {
+      "title": "特罗尔德豪根的婚礼日",
+      "genre": "Lyric Piece",
+      "opus": "Op.65 No.6",
+      "key": "D major"
+    },
+    {
+      "title": "阿丽埃塔 (Arietta, 抒情小品开篇)",
+      "genre": "Lyric Piece",
+      "opus": "Op.12 No.1",
+      "key": "E-flat major"
+    },
+    {
+      "title": "小精灵 / 侏儒进行曲",
+      "genre": "Lyric Piece",
+      "opus": "Op.54 No.3",
+      "key": "D minor"
+    },
+    {
+      "title": "a小调钢琴协奏曲 第一乐章",
+      "genre": "Concerto",
+      "opus": "Op.16",
+      "key": "A minor"
+    }
+  ]
+}

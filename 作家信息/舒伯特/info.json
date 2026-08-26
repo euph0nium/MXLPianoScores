@@ -1,0 +1,57 @@
+{
+  "id": "schubert",
+  "name": "弗朗茨·舒伯特",
+  "original_name": "Franz Peter Schubert",
+  "short_name": "舒伯特",
+  "birth_year": 1797,
+  "death_year": 1828,
+  "nationality": "奥地利",
+  "period": "早期浪漫主义 (Romantic)",
+  "title": "歌曲之王 / 浪漫主义抒情天才",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "KernScores/schubert",
+    "OpenScore/Schubert"
+  ],
+  "bio_short": "奥地利早期浪漫主义杰出代表，被公认为‘歌曲之王’。其钢琴即兴曲、音乐瞬间与奏鸣曲洋溢着天籁般的歌唱性旋律与多愁善感的和声色彩。",
+  "bio_full": "舒伯特生于维也纳，在极其贫困与病痛的短暂31年岁月中，创作了600多首不朽的艺术歌曲及大量室内乐与钢琴曲。舒伯特将德奥艺术歌曲中深邃动人的歌唱性完美移植到了钢琴独奏领域。他的《即兴曲集》(Op.90, Op.142) 与《音乐瞬间》(Moments Musicaux, Op.94) 旋律纯净悠扬、转调如梦如幻，深深启发了后来的肖邦、李斯特与勃拉姆斯。",
+  "masterpieces": [
+    {
+      "title": "f小调音乐瞬间 (Moments Musicaux No.3)",
+      "genre": "Musical Moment",
+      "opus": "Op.94 No.3",
+      "key": "F minor"
+    },
+    {
+      "title": "降G大调即兴曲",
+      "genre": "Impromptu",
+      "opus": "Op.90 No.3",
+      "key": "G-flat major"
+    },
+    {
+      "title": "降E大调即兴曲",
+      "genre": "Impromptu",
+      "opus": "Op.90 No.2",
+      "key": "E-flat major"
+    },
+    {
+      "title": "c小调即兴曲",
+      "genre": "Impromptu",
+      "opus": "Op.90 No.1",
+      "key": "C minor"
+    },
+    {
+      "title": "降B大调第二十一钢琴奏鸣曲",
+      "genre": "Piano Sonata",
+      "opus": "D.960",
+      "key": "B-flat major"
+    },
+    {
+      "title": "军队进行曲",
+      "genre": "March",
+      "opus": "D.733 No.1",
+      "key": "D major"
+    }
+  ]
+}
