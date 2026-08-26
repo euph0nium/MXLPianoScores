@@ -118,7 +118,8 @@ def main():
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 85)
 
-    datasets = sorted([d for d in ROOT_DIR.iterdir() if d.is_dir() and not d.name.startswith('.') and d.name != 'scripts'])
+    scores_dir = ROOT_DIR / "scores"
+    datasets = sorted([d for d in scores_dir.iterdir() if d.is_dir() and not d.name.startswith('.')])
     
     total_scores_all = 0
     valid_scores_all = 0
