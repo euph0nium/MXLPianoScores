@@ -46,10 +46,21 @@ MXLPianoScores/
 ├── Tchaikovsky_Childrens_Album/        # 柴可夫斯基《儿童钢琴曲集》Op. 39 全套 24 首
 ├── Technique_Studies/                  # 施密特 / 柯勒 / 贝伦斯 / 杜弗诺伊 / 海勒练习曲
 ├── scripts/                            # 自动化质检、目录构建与转换工具
+├── APP_STORE_SUBMISSION_GUIDE.md    # 苹果 App Store 提审与版权合规实战指南
+├── COPYRIGHT_AND_COMMERCIAL_LICENSE.md # 乐谱版权与免费商用许可合规说明书
 ├── GLOBAL_PIANO_SOLO_CATALOG.md        # 全量作品逐曲详细中英文索引与百科
 ├── Piano_Solo_MusicXML_Guide.md        # 开发者与乐谱格式集成指南
 └── global_scores_index.json            # 机器可读的 5,897 条结构化元数据数据库
 ```
+
+---
+
+## ⚖️ 版权与免费商用许可
+
+本曲库收录的古典音乐作品本身 **100% 处于公有领域 (Public Domain)**，数字化乐谱编码均遵循 **CC0 1.0 Universal / Public Domain** 协议，支持**无偿、免版税的商业化应用**（包括移动端 App 嵌入、SaaS 云服务、AI 算法训练、教材出版与教学等）。
+
+* 👉 **完整版权法律剖析与商用合规指南**：[📄 COPYRIGHT_AND_COMMERCIAL_LICENSE.md](./COPYRIGHT_AND_COMMERCIAL_LICENSE.md)
+* 🍎 **苹果 App Store 提审与审核备注模板**：[📄 APP_STORE_SUBMISSION_GUIDE.md](./APP_STORE_SUBMISSION_GUIDE.md)
 
 ---
 
@@ -77,3 +88,4 @@ print(f"肖邦作品数: {len(chopin_scores)}")
 ```bash
 python3 scripts/validate_scores_quality.py
 ```
+
