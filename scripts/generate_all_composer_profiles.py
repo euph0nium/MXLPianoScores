@@ -24,7 +24,7 @@ COMPOSERS_DATA = [
         "title": "钢琴诗人 (The Poet of the Piano)",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/chopin"],
+        "library_collections": ["scores/KernScores/chopin"],
         "bio_short": "19世纪浪漫主义时期最伟大的作曲家和钢琴演奏家之一，被誉为‘钢琴诗人’。其毕生创作专注于钢琴独奏，将旋律的诗意、细腻的织体与自由速度（Rubato）发挥到了极致。",
         "bio_full": "弗雷德里克·肖邦出生于波兰华沙附近的热拉佐瓦-沃拉。二十岁时前往巴黎并在欧洲音乐界赢得极高声誉。肖邦将波兰传统的民间音乐语汇（如玛祖卡、波兰舞曲）与典雅的法式沙龙文化相融合，创作出兼具深沉爱国情怀与诗意色彩的永恒杰作。他的音乐旋律优美动人、和声丰富，是浪漫主义钢琴音乐的最高典范。",
         "masterpieces": [
@@ -52,7 +52,7 @@ COMPOSERS_DATA = [
         "title": "西方现代音乐之父 (The Father of Western Music)",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Bach_Beginner", "KernScores/bach"],
+        "library_collections": ["scores/Bach_Beginner", "scores/KernScores/bach"],
         "bio_short": "巴洛克音乐集大成者，整部西方古典音乐史中最伟大的奠基人，被尊称为‘西方音乐之父’。其《平均律键盘曲集》被誉为键盘乐器的‘旧约圣经’。",
         "bio_full": "约翰·塞巴斯蒂安·巴赫精通管风琴、羽管键琴与小提琴，将复调对位法、赋格与和声体系推向不可逾越的艺术巅峰。其音乐兼具深邃的宗教神圣感与严密的数学逻辑结构，为近现代键盘音乐打下了坚实基石。",
         "masterpieces": [
@@ -79,7 +79,7 @@ COMPOSERS_DATA = [
         "title": "乐圣 (The Titan of Classical Music)",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/beethoven", "Sonatinas/Beethoven"],
+        "library_collections": ["scores/KernScores/beethoven", "scores/Sonatinas/Beethoven"],
         "bio_short": "维也纳古典乐派代表人物、西方音乐史上最伟大的作曲家之一，被后世尊称为‘乐圣’。其32首钢琴奏鸣曲被公认为钢琴音乐的‘新约圣经’。",
         "bio_full": "贝多芬出生于德国波恩，少年时期定居维也纳并师从海顿。青年时期以精湛绝伦的钢琴即兴演奏震撼维也纳乐坛，随后在中年时期遭遇严重的进行性耳聋打击。面对命运的重压，他以‘扼住命运的咽喉’的坚强意志创作出数量惊人的传世杰作。他的音乐突破了古典主义严谨的框框，开创了浪漫主义以个人情感、英雄主义与崇高意志为核心的音乐新纪元。其32首钢琴奏鸣曲集思想深度、结构交响化与演奏技巧于一体，与巴赫《平均律键盘曲集》并称为钢琴艺术史上不可逾越的双峰。",
         "masterpieces": [
@@ -106,7 +106,7 @@ COMPOSERS_DATA = [
         "title": "音乐神童 (The Musical Genius)",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/mozart", "Sonatinas/Mozart"],
+        "library_collections": ["scores/KernScores/mozart", "scores/Sonatinas/Mozart"],
         "bio_short": "欧洲古典主义音乐巅峰代表，人类历史上无与伦比的音乐天才。其音乐纯净典雅、旋律宛若天籁，在钢琴奏鸣曲、协奏曲与歌剧领域均达至臻之境。",
         "bio_full": "莫扎特出生于奥地利萨尔茨堡，4岁开始作曲，自幼随父亲巡演全欧，展现出震古烁今的音乐早慧。在短暂而辉煌的35年生命中，莫扎特留下了600多部涵盖所有体裁的旷世杰作。莫扎特的钢琴作品结构严谨对称、织体明澈透亮，看似清丽流畅、无拘无束，实则蕴含极高的歌唱性与细腻复杂的情感张力。他的音乐被后世誉为‘降临人间的纯净阳光’。",
         "masterpieces": [
@@ -133,7 +133,7 @@ COMPOSERS_DATA = [
         "title": "交响乐之父 / 弦乐四重奏之父",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/haydn"],
+        "library_collections": ["scores/KernScores/haydn"],
         "bio_short": "维也纳古典乐派奠基人，被尊称为‘交响乐之父’与‘海顿爸爸’。确立了古典主义奏鸣曲式结构，其键盘奏鸣曲洋溢着风趣、幽默与均衡之美。",
         "bio_full": "海顿在埃斯特哈齐家族担任乐长近三十年，在长期的乐团实践中探索并奠定了交响曲、弦乐四重奏以及古典钢琴奏鸣曲的标准曲式框架。海顿不仅启发并指导了年轻的莫扎特与贝多芬，更以其乐观豁达、生动风趣的音乐性格为世人所爱。他的60余首键盘奏鸣曲构思精巧、充满民间音乐的质朴欢快与机智巧思，是古典键盘艺术不可或缺的基石。",
         "masterpieces": [
@@ -158,7 +158,7 @@ COMPOSERS_DATA = [
         "title": "现代钢琴教学之父",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Czerny/Op_599", "Czerny/Op_849", "Czerny/Op_299", "Czerny/Op_740"],
+        "library_collections": ["scores/Czerny/Op_599", "scores/Czerny/Op_849", "scores/Czerny/Op_299", "scores/Czerny/Op_740"],
         "bio_short": "贝多芬的得意门生、李斯特的恩师，钢琴练习曲发展史上的里程碑式宗师。其编写的系统性练习曲是全世界钢琴学子通往专业演奏的必由之路。",
         "bio_full": "车尔尼自幼随贝多芬学习钢琴，继承了维也纳古典乐派严谨规范的演奏法，随后培养出包括李斯特（Franz Liszt）、莱谢蒂茨基（Leschetizky）等一大批钢琴巨匠。车尔尼一生创作了超过千部作品，其中以循序渐进、体系完备的钢琴技巧练习曲最为举世瞩目。从《599 初级练习曲》、《849 流畅练习曲》到《299 快速练习曲》与《740 高级技巧练习曲》，构成了全球钢琴教育史上最具权威性、不可替代的技术教学大纲。",
         "masterpieces": [
@@ -183,7 +183,7 @@ COMPOSERS_DATA = [
         "title": "钢琴叙事性进阶练习曲大师",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Burgmuller/Op_100", "Burgmuller/Op_105", "Burgmuller/Op_109"],
+        "library_collections": ["scores/Burgmuller/Op_100", "scores/Burgmuller/Op_105", "scores/Burgmuller/Op_109"],
         "bio_short": "浪漫主义时期著名的作曲家与钢琴教育家。其《25首简易与进阶练习曲 Op.100》将纯正的技术训练与生动诗意的标题音乐完美融为一体。",
         "bio_full": "布格缪勒出生于德国雷根斯堡的音乐名门，后定居巴黎成为炙手可热的沙龙钢琴家与作曲家。布格缪勒最深远的影响力在于他创造性地将枯燥的手指机能练习转化为充满诗情画意、极具感染力的音乐小品。其《进阶练习曲 25 首 Op.100》（如《贵妇人的骑马》、《牧歌》、《阿拉伯风格曲》、《清澈的小溪》）旋律优美生动、形象鲜明，被公认为全球钢琴入门过渡到中级阶段最受喜爱的教学经典。",
         "masterpieces": [
@@ -210,7 +210,7 @@ COMPOSERS_DATA = [
         "title": "钢琴启蒙教育奠基人",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Beyer/Op_101"],
+        "library_collections": ["scores/Beyer/Op_101"],
         "bio_short": "德国钢琴家与著名音乐教育家。其《钢琴初级教程 Op.101》（通称‘拜厄’）是全球普及度最高、影响了几代琴童的经典钢琴启蒙教材。",
         "bio_full": "拜厄活跃于19世纪中叶的德国莱茵地区，致力于普及钢琴基础教育。他编订的《钢琴初级教程 Op.101》以极其平缓温和的坡度，系统讲解了五线谱识读、双手独立协调、简单调性转换、音阶与琶音练习，并穿插了大量优美易懂的四手联弹曲目。历经一个半世纪的教学检验，拜厄教程依然是全球非专业与少儿钢琴启蒙最具知名度的入门大纲之一。",
         "masterpieces": [
@@ -233,7 +233,7 @@ COMPOSERS_DATA = [
         "title": "钢琴手指机能训练宗师",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Hanon"],
+        "library_collections": ["scores/Hanon"],
         "bio_short": "法国管风琴家、钢琴家与教育家。其著作《钢琴练指法 60 首名手练功曲》是全世界钢琴演奏者锻炼手指独立性、爆发力与敏捷度的核心圣经。",
         "bio_full": "哈农生于法国北部滨海布洛涅，毕生专注研究钢琴弹奏的生理学机能与手指独立运动规律。其传世代表作《钢琴练指法 60 首》(The Virtuoso Pianist) 针对钢琴演奏中每根手指（尤其是薄弱的 4、5 指）的力量均衡、手腕柔韧性、大指穿指、八度、震音及全调音阶琶音设计了高度精炼的模块化练习。无论是初学者打基础，还是职业钢琴大师日常开指热身，哈农练指法均是必不可少的‘手指体操’。",
         "masterpieces": [
@@ -255,7 +255,7 @@ COMPOSERS_DATA = [
         "title": "浪漫主义音乐诗人 / 音乐评论宗师",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Schumann_Album_for_the_Young", "OpenScore/Schumann"],
+        "library_collections": ["scores/Schumann_Album_for_the_Young", "scores/OpenScore/Schumann"],
         "bio_short": "德奥浪漫主义音乐巅峰代表，兼具深邃文学修养与梦幻音乐构思的天才。其《童年情景》与《少年钢琴曲集》以纯真诗意与细腻织体闻名遐迩。",
         "bio_full": "舒曼出生于德国茨维考的书商家庭，自幼兼具卓越的文学才华与音乐天赋。他创办《新音乐杂志》并极具前瞻性地发掘了肖邦与勃拉姆斯。舒曼的钢琴音乐充满双重性格（激昂热烈的弗洛雷斯坦与沉思内省的约瑟比乌斯），善于捕捉瞬息万变的情感微澜。其《少年钢琴曲集 Op.68》专为儿童与青少年的音乐想象力而作，而《童年情景 Op.15》（包含名作《梦幻曲》）更是以成人的温情目光回望童年时光的至臻杰作。",
         "masterpieces": [
@@ -280,7 +280,7 @@ COMPOSERS_DATA = [
         "title": "俄罗斯旋律之王 / 芭蕾音乐巨擘",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Tchaikovsky_Childrens_Album"],
+        "library_collections": ["scores/Tchaikovsky_Childrens_Album"],
         "bio_short": "俄罗斯浪漫主义音乐最伟大的代表，世所公认的‘旋律之王’。其音乐情感真挚浓郁、旋律极具歌唱性，其《儿童钢琴曲集》是世界少儿钢琴文献明珠。",
         "bio_full": "柴可夫斯基毕业于圣彼得堡音乐学院，将俄罗斯民族民间音乐的深沉忧郁、辽阔奔放与西欧古典管弦乐交响构思完美融为一体。柴可夫斯基拥有无与伦比的抒情旋律天赋。其创作的《儿童钢琴曲集 Op.39》（全24首）生动再现了俄罗斯儿童的日常生活、童话故事与异国风情（如《晨祷》、《玩具兵进行曲》、《甜美的梦》、《俄罗斯舞曲》等），曲调通俗优美、形象生动，深受全世界钢琴演奏者喜爱。",
         "masterpieces": [
@@ -306,7 +306,7 @@ COMPOSERS_DATA = [
         "title": "北欧肖邦 / 挪威民族音乐之魂",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Grieg_Lyric_Pieces"],
+        "library_collections": ["scores/Grieg_Lyric_Pieces"],
         "bio_short": "挪威民族乐派奠基人，以清丽脱俗、散发着北欧峡湾与森林气息的旋律闻名，其10卷《抒情小品集》(Lyric Pieces) 是浪漫主义钢琴小品之瑰宝。",
         "bio_full": "格里格毕业于莱比锡音乐学院，随后致力于发掘挪威民间传说、民歌调式与峡湾壮丽自然风光中的艺术灵感。他的音乐清新纯净、和声大胆新颖，对后来的印象主义音乐产生了先导性启示。格里格一生共创作了 10 卷共 66 首《抒情小品集》(Lyric Pieces)，包括著名的《致春天》、《蝴蝶》、《特罗尔德豪根的婚礼日》、《挪威舞曲》等，将北欧大自然的纯净风情化作极度洗练优美的钢琴音诗。",
         "masterpieces": [
@@ -331,7 +331,7 @@ COMPOSERS_DATA = [
         "title": "现代钢琴演奏之父 / 小奏鸣曲宗师",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Sonatinas/Clementi_Op36"],
+        "library_collections": ["scores/Sonatinas/Clementi_Op36"],
         "bio_short": "古典主义时期作曲家、钢琴演奏大师与钢琴制造商，被誉为‘现代钢琴演奏之父’。其《小奏鸣曲集 Op.36》是全球钢琴教学黄金必弹经典。",
         "bio_full": "克莱门蒂出生于罗马，长期活跃于伦敦。他是最早完全针对现代击弦钢琴（而非羽管键琴）的机械性能与发音特质进行系统创作和演奏的先驱。曾与青年莫扎特在维也纳宫廷进行举世瞩目的钢琴演奏对决。他的《6首小奏鸣曲 Op.36》结构紧凑明快、乐句清晰匀称、指法规范严谨，是所有学习古典奏鸣曲结构与双手平衡控制最重要的必修阶梯。",
         "masterpieces": [
@@ -357,7 +357,7 @@ COMPOSERS_DATA = [
         "title": "歌曲之王 / 浪漫主义抒情天才",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/schubert", "OpenScore/Schubert"],
+        "library_collections": ["scores/KernScores/schubert", "scores/OpenScore/Schubert"],
         "bio_short": "奥地利早期浪漫主义杰出代表，被公认为‘歌曲之王’。其钢琴即兴曲、音乐瞬间与奏鸣曲洋溢着天籁般的歌唱性旋律与多愁善感的和声色彩。",
         "bio_full": "舒伯特生于维也纳，在极其贫困与病痛的短暂31年岁月中，创作了600多首不朽的艺术歌曲及大量室内乐与钢琴曲。舒伯特将德奥艺术歌曲中深邃动人的歌唱性完美移植到了钢琴独奏领域。他的《即兴曲集》(Op.90, Op.142) 与《音乐瞬间》(Moments Musicaux, Op.94) 旋律纯净悠扬、转调如梦如幻，深深启发了后来的肖邦、李斯特与勃拉姆斯。",
         "masterpieces": [
@@ -382,7 +382,7 @@ COMPOSERS_DATA = [
         "title": "古典传统的坚守者 / 三B巨匠之一",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/brahms", "OpenScore/Brahms"],
+        "library_collections": ["scores/KernScores/brahms", "scores/OpenScore/Brahms"],
         "bio_short": "德国浪漫主义音乐大师，与巴赫、贝多芬并称为德国音乐史上的‘3B’巨匠。其晚期钢琴间奏曲与狂想曲沉郁内省、结构严密、情感深厚。",
         "bio_full": "勃拉姆斯出生于汉堡，青年时期受到舒曼夫妇的大力推介。在19世纪激进的新德意志乐派狂潮中，勃拉姆斯坚持严格继承巴赫的对位法与贝多芬的古典奏鸣曲严密架构，创造出宏大雄浑与深沉内敛并存的崇高艺术风格。他的晚期钢琴小品集（Op.116至119间奏曲、狂想曲、叙事曲）被誉为‘写给钢琴的暮年沉思诗篇’。",
         "masterpieces": [
@@ -407,7 +407,7 @@ COMPOSERS_DATA = [
         "title": "拉格泰姆之王 (The King of Ragtime)",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["KernScores/joplin"],
+        "library_collections": ["scores/KernScores/joplin"],
         "bio_short": "美国非裔作曲家、钢琴家，被公认为‘拉格泰姆之王’。他将复杂的切分节奏与古典钢琴和声完美结合，开创了近现代流行与爵士音乐的先河。",
         "bio_full": "乔普林出生于美国德克萨斯州，在非裔民间切分音乐传统与欧洲古典钢琴技术的交汇中开创了风靡全球的‘拉格泰姆’（Ragtime）风格。乔普林的钢琴作品旋律欢快跳跃、节奏富于弹性与律动感，同时蕴含细腻典雅的古典结构美。代表作《枫叶拉格》与《演艺人》（电影《骗中骗》主题曲）是全世界家喻户晓的经典名作。",
         "masterpieces": [
@@ -431,7 +431,7 @@ COMPOSERS_DATA = [
         "title": "小奏鸣曲名家 / 长笛贝多芬",
         "avatar": "avatar.jpg",
         "illustration": "illustration.jpg",
-        "library_collections": ["Sonatinas/Kuhlau"],
+        "library_collections": ["scores/Sonatinas/Kuhlau"],
         "bio_short": "德裔丹麦古典浪漫主义作曲家。其《小奏鸣曲集》(Op.20, Op.55) 清新明朗、织体工整，是全球钢琴教育界与克莱门蒂齐名的小奏鸣曲大师。",
         "bio_full": "库劳早年在汉堡学习音乐，后定居哥本哈根并成为丹麦宫廷作曲家。他曾与贝多芬私交甚笃并深受其启发。库劳的小奏鸣曲（如 Op.20、Op.55、Op.59）旋律活泼纯净、技术难度适中、曲式严谨清晰，充满歌唱性的欢快主题，是钢琴学子从初级进阶到中高级古典奏鸣曲不可或缺的基石文献。",
         "masterpieces": [

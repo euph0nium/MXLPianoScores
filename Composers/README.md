@@ -42,20 +42,20 @@ Composers/
 
 | 目录 (Folder) | 中文名 | 外文全名 (Full Name) | 艺术流派 | 代表性称号 | 本地乐谱库专集 | 目录链接 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`Chopin`** | 弗雷德里克·肖邦 | Frédéric François Chopin | 浪漫主义时期 (Romantic) | 钢琴诗人 | `KernScores/chopin` | [进入 `Chopin`](./Chopin/README.md) |
-| **`Bach`** | 约翰·塞巴斯蒂安·巴赫 | Johann Sebastian Bach | 巴洛克时期 (Baroque) | 西方现代音乐之父 | `Bach_Beginner`, `KernScores/bach` | [进入 `Bach`](./Bach/README.md) |
-| **`Beethoven`** | 路德维希·凡·贝多芬 | Ludwig van Beethoven | 维也纳古典乐派 | 乐圣 | `KernScores/beethoven`, `Sonatinas/Beethoven` | [进入 `Beethoven`](./Beethoven/README.md) |
-| **`Mozart`** | 沃尔夫冈·阿玛多伊斯·莫扎特 | Wolfgang Amadeus Mozart | 维也纳古典乐派 (Classical) | 音乐神童 | `KernScores/mozart`, `Sonatinas/Mozart` | [进入 `Mozart`](./Mozart/README.md) |
-| **`Haydn`** | 约瑟夫·海顿 | Franz Joseph Haydn | 维也纳古典乐派 (Classical) | 交响乐之父 / 弦乐四重奏之父 | `KernScores/haydn` | [进入 `Haydn`](./Haydn/README.md) |
-| **`Czerny`** | 卡尔·车尔尼 | Carl Czerny | 浪漫主义时期 | 现代钢琴教学之父 | `Czerny/Op_599`, `Czerny/Op_849` | [进入 `Czerny`](./Czerny/README.md) |
-| **`Burgmuller`** | 约瑟夫·弗里德里希·布格缪勒 | Johann Friedrich Franz Burgmüller | 浪漫主义时期 (Romantic) | 钢琴叙事性进阶练习曲大师 | `Burgmuller/Op_100`, `Burgmuller/Op_105` | [进入 `Burgmuller`](./Burgmuller/README.md) |
-| **`Beyer`** | 斐迪南·拜厄 | Ferdinand Beyer | 浪漫主义时期 (Romantic) | 钢琴启蒙教育奠基人 | `Beyer/Op_101` | [进入 `Beyer`](./Beyer/README.md) |
-| **`Hanon`** | 夏尔-路易·哈农 | Charles-Louis Hanon | 浪漫主义时期 (Romantic) | 钢琴手指机能训练宗师 | `Hanon` | [进入 `Hanon`](./Hanon/README.md) |
-| **`Schumann`** | 罗伯特·舒曼 | Robert Schumann | 浪漫主义全盛期 (Romantic) | 浪漫主义音乐诗人 / 音乐评论宗师 | `Schumann_Album_for_the_Young`, `OpenScore/Schumann` | [进入 `Schumann`](./Schumann/README.md) |
-| **`Tchaikovsky`** | 彼得·伊里奇·柴可夫斯基 | Pyotr Ilyich Tchaikovsky | 浪漫主义时期 (Romantic) | 俄罗斯旋律之王 / 芭蕾音乐巨擘 | `Tchaikovsky_Childrens_Album` | [进入 `Tchaikovsky`](./Tchaikovsky/README.md) |
-| **`Grieg`** | 爱德华·格里格 | Edvard Hagerup Grieg | 民族乐派 | 北欧肖邦 / 挪威民族音乐之魂 | `Grieg_Lyric_Pieces` | [进入 `Grieg`](./Grieg/README.md) |
-| **`Clementi`** | 穆齐奥·克莱门蒂 | Muzio Clementi | 古典主义时期 (Classical) | 现代钢琴演奏之父 / 小奏鸣曲宗师 | `Sonatinas/Clementi_Op36` | [进入 `Clementi`](./Clementi/README.md) |
-| **`Schubert`** | 弗朗茨·舒伯特 | Franz Peter Schubert | 早期浪漫主义 (Romantic) | 歌曲之王 / 浪漫主义抒情天才 | `KernScores/schubert`, `OpenScore/Schubert` | [进入 `Schubert`](./Schubert/README.md) |
-| **`Brahms`** | 约翰内斯·勃拉姆斯 | Johannes Brahms | 浪漫主义全盛期 (Romantic) | 古典传统的坚守者 / 三B巨匠之一 | `KernScores/brahms`, `OpenScore/Brahms` | [进入 `Brahms`](./Brahms/README.md) |
-| **`Joplin`** | 斯科特·乔普林 | Scott Joplin | 拉格泰姆 | 拉格泰姆之王 | `KernScores/joplin` | [进入 `Joplin`](./Joplin/README.md) |
-| **`Kuhlau`** | 弗里德里希·库劳 | Friedrich Daniel Rudolf Kuhlau | 古典主义向早期浪漫主义过渡 | 小奏鸣曲名家 / 长笛贝多芬 | `Sonatinas/Kuhlau` | [进入 `Kuhlau`](./Kuhlau/README.md) |
+| **`Chopin`** | 弗雷德里克·肖邦 | Frédéric François Chopin | 浪漫主义时期 (Romantic) | 钢琴诗人 | `scores/KernScores/chopin` | [进入 `Chopin`](./Chopin/README.md) |
+| **`Bach`** | 约翰·塞巴斯蒂安·巴赫 | Johann Sebastian Bach | 巴洛克时期 (Baroque) | 西方现代音乐之父 | `scores/Bach_Beginner`, `scores/KernScores/bach` | [进入 `Bach`](./Bach/README.md) |
+| **`Beethoven`** | 路德维希·凡·贝多芬 | Ludwig van Beethoven | 维也纳古典乐派 | 乐圣 | `scores/KernScores/beethoven`, `scores/Sonatinas/Beethoven` | [进入 `Beethoven`](./Beethoven/README.md) |
+| **`Mozart`** | 沃尔夫冈·阿玛多伊斯·莫扎特 | Wolfgang Amadeus Mozart | 维也纳古典乐派 (Classical) | 音乐神童 | `scores/KernScores/mozart`, `scores/Sonatinas/Mozart` | [进入 `Mozart`](./Mozart/README.md) |
+| **`Haydn`** | 约瑟夫·海顿 | Franz Joseph Haydn | 维也纳古典乐派 (Classical) | 交响乐之父 / 弦乐四重奏之父 | `scores/KernScores/haydn` | [进入 `Haydn`](./Haydn/README.md) |
+| **`Czerny`** | 卡尔·车尔尼 | Carl Czerny | 浪漫主义时期 | 现代钢琴教学之父 | `scores/Czerny/Op_599`, `scores/Czerny/Op_849` | [进入 `Czerny`](./Czerny/README.md) |
+| **`Burgmuller`** | 约瑟夫·弗里德里希·布格缪勒 | Johann Friedrich Franz Burgmüller | 浪漫主义时期 (Romantic) | 钢琴叙事性进阶练习曲大师 | `scores/Burgmuller/Op_100`, `scores/Burgmuller/Op_105` | [进入 `Burgmuller`](./Burgmuller/README.md) |
+| **`Beyer`** | 斐迪南·拜厄 | Ferdinand Beyer | 浪漫主义时期 (Romantic) | 钢琴启蒙教育奠基人 | `scores/Beyer/Op_101` | [进入 `Beyer`](./Beyer/README.md) |
+| **`Hanon`** | 夏尔-路易·哈农 | Charles-Louis Hanon | 浪漫主义时期 (Romantic) | 钢琴手指机能训练宗师 | `scores/Hanon` | [进入 `Hanon`](./Hanon/README.md) |
+| **`Schumann`** | 罗伯特·舒曼 | Robert Schumann | 浪漫主义全盛期 (Romantic) | 浪漫主义音乐诗人 / 音乐评论宗师 | `scores/Schumann_Album_for_the_Young`, `scores/OpenScore/Schumann` | [进入 `Schumann`](./Schumann/README.md) |
+| **`Tchaikovsky`** | 彼得·伊里奇·柴可夫斯基 | Pyotr Ilyich Tchaikovsky | 浪漫主义时期 (Romantic) | 俄罗斯旋律之王 / 芭蕾音乐巨擘 | `scores/Tchaikovsky_Childrens_Album` | [进入 `Tchaikovsky`](./Tchaikovsky/README.md) |
+| **`Grieg`** | 爱德华·格里格 | Edvard Hagerup Grieg | 民族乐派 | 北欧肖邦 / 挪威民族音乐之魂 | `scores/Grieg_Lyric_Pieces` | [进入 `Grieg`](./Grieg/README.md) |
+| **`Clementi`** | 穆齐奥·克莱门蒂 | Muzio Clementi | 古典主义时期 (Classical) | 现代钢琴演奏之父 / 小奏鸣曲宗师 | `scores/Sonatinas/Clementi_Op36` | [进入 `Clementi`](./Clementi/README.md) |
+| **`Schubert`** | 弗朗茨·舒伯特 | Franz Peter Schubert | 早期浪漫主义 (Romantic) | 歌曲之王 / 浪漫主义抒情天才 | `scores/KernScores/schubert`, `scores/OpenScore/Schubert` | [进入 `Schubert`](./Schubert/README.md) |
+| **`Brahms`** | 约翰内斯·勃拉姆斯 | Johannes Brahms | 浪漫主义全盛期 (Romantic) | 古典传统的坚守者 / 三B巨匠之一 | `scores/KernScores/brahms`, `scores/OpenScore/Brahms` | [进入 `Brahms`](./Brahms/README.md) |
+| **`Joplin`** | 斯科特·乔普林 | Scott Joplin | 拉格泰姆 | 拉格泰姆之王 | `scores/KernScores/joplin` | [进入 `Joplin`](./Joplin/README.md) |
+| **`Kuhlau`** | 弗里德里希·库劳 | Friedrich Daniel Rudolf Kuhlau | 古典主义向早期浪漫主义过渡 | 小奏鸣曲名家 / 长笛贝多芬 | `scores/Sonatinas/Kuhlau` | [进入 `Kuhlau`](./Kuhlau/README.md) |

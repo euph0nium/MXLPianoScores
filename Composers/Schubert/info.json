@@ -12,8 +12,8 @@
   "avatar": "avatar.jpg",
   "illustration": "illustration.jpg",
   "library_collections": [
-    "KernScores/schubert",
-    "OpenScore/Schubert"
+    "scores/KernScores/schubert",
+    "scores/OpenScore/Schubert"
   ],
   "bio_short": "奥地利早期浪漫主义杰出代表，被公认为‘歌曲之王’。其钢琴即兴曲、音乐瞬间与奏鸣曲洋溢着天籁般的歌唱性旋律与多愁善感的和声色彩。",
   "bio_full": "舒伯特生于维也纳，在极其贫困与病痛的短暂31年岁月中，创作了600多首不朽的艺术歌曲及大量室内乐与钢琴曲。舒伯特将德奥艺术歌曲中深邃动人的歌唱性完美移植到了钢琴独奏领域。他的《即兴曲集》(Op.90, Op.142) 与《音乐瞬间》(Moments Musicaux, Op.94) 旋律纯净悠扬、转调如梦如幻，深深启发了后来的肖邦、李斯特与勃拉姆斯。",

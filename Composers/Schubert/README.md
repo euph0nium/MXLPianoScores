@@ -36,8 +36,8 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/KernScores/schubert`
-- `/OpenScore/Schubert`
+- `/scores/KernScores/schubert`
+- `/scores/OpenScore/Schubert`
 
 ---
 

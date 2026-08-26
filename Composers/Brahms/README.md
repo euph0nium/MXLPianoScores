@@ -36,8 +36,8 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/KernScores/brahms`
-- `/OpenScore/Brahms`
+- `/scores/KernScores/brahms`
+- `/scores/OpenScore/Brahms`
 
 ---
 

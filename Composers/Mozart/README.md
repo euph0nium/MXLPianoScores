@@ -38,8 +38,8 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/KernScores/mozart`
-- `/Sonatinas/Mozart`
+- `/scores/KernScores/mozart`
+- `/scores/Sonatinas/Mozart`
 
 ---
 

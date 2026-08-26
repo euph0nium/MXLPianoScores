@@ -38,8 +38,8 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/KernScores/beethoven`
-- `/Sonatinas/Beethoven`
+- `/scores/KernScores/beethoven`
+- `/scores/Sonatinas/Beethoven`
 
 ---
 

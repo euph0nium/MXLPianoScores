@@ -37,7 +37,7 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/Sonatinas/Clementi_Op36`
+- `/scores/Sonatinas/Clementi_Op36`
 
 ---
 

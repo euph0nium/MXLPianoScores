@@ -36,7 +36,7 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/KernScores/haydn`
+- `/scores/KernScores/haydn`
 
 ---
 

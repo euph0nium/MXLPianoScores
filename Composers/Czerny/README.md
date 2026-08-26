@@ -36,10 +36,10 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/Czerny/Op_599`
-- `/Czerny/Op_849`
-- `/Czerny/Op_299`
-- `/Czerny/Op_740`
+- `/scores/Czerny/Op_599`
+- `/scores/Czerny/Op_849`
+- `/scores/Czerny/Op_299`
+- `/scores/Czerny/Op_740`
 
 ---
 

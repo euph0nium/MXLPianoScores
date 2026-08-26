@@ -38,9 +38,9 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/Burgmuller/Op_100`
-- `/Burgmuller/Op_105`
-- `/Burgmuller/Op_109`
+- `/scores/Burgmuller/Op_100`
+- `/scores/Burgmuller/Op_105`
+- `/scores/Burgmuller/Op_109`
 
 ---
 

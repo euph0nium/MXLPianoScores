@@ -37,7 +37,7 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/Tchaikovsky_Childrens_Album`
+- `/scores/Tchaikovsky_Childrens_Album`
 
 ---
 

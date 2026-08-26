@@ -36,8 +36,8 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/Schumann_Album_for_the_Young`
-- `/OpenScore/Schumann`
+- `/scores/Schumann_Album_for_the_Young`
+- `/scores/OpenScore/Schumann`
 
 ---
 

@@ -38,8 +38,8 @@
 
 ## 🎼 本地乐谱库对应专集目录
 
-- `/Bach_Beginner`
-- `/KernScores/bach`
+- `/scores/Bach_Beginner`
+- `/scores/KernScores/bach`
 
 ---
 
