@@ -3,9 +3,11 @@
 Build Verified Authentic Beginner & Intermediate Piano Library from Mutopia Repository.
 Converts LilyPond original vector scores into standard MusicXML (.mxl) files.
 100% Note-by-note Urtext, zero placeholders, 100% Public Domain / Free for Commercial Use.
+Strictly clean international English titles (no Chinese characters, no extraneous parentheses).
 """
 
 import os
+import re
 import sys
 import glob
 import shutil
@@ -19,8 +21,28 @@ ROOT_DIR = Path("/Users/shiyuli/Dev/Scores")
 SCORES_DIR = ROOT_DIR / "scores"
 MUTOPIA_REPO = Path("/tmp/mutopia_repo/ftp")
 
+def clean_text(s: str) -> str:
+    if not s:
+        return ""
+    # Remove any parenthesized text that contains Chinese
+    s = re.sub(r"\s*[\(（][^\)）]*?[\u4e00-\u9fff]+[^\)）]*?[\)）]\s*", " ", s)
+    # Remove any remaining Chinese characters
+    s = re.sub(r"[\u4e00-\u9fff]+", "", s)
+    # Clean empty parentheses or brackets
+    s = re.sub(r"[\(（]\s*[\)）]", "", s)
+    s = re.sub(r"\[\s*\]", "", s)
+    # Clean whitespace and trailing dashes
+    s = re.sub(r"\s{2,}", " ", s)
+    s = re.sub(r"\s*-\s*$", "", s)
+    s = re.sub(r"^\s*-\s*", "", s)
+    return s.strip()
+
 def convert_ly_to_mxl(ly_source_path: Path, out_mxl_path: Path, title: str, composer: str, subtitle: str = ""):
     import music21
+    
+    clean_t = clean_text(title)
+    clean_c = clean_text(composer)
+    clean_sub = clean_text(subtitle)
     
     with tempfile.TemporaryDirectory() as td:
         temp_ly = os.path.join(td, "score.ly")
@@ -42,9 +64,9 @@ def convert_ly_to_mxl(ly_source_path: Path, out_mxl_path: Path, title: str, comp
         try:
             score = music21.converter.parse(midi_path)
             score.metadata = music21.metadata.Metadata()
-            score.metadata.title = title
-            score.metadata.composer = composer
-            score.metadata.movementName = subtitle or title
+            score.metadata.title = clean_t
+            score.metadata.composer = clean_c
+            score.metadata.movementName = clean_sub or clean_t
             score.metadata.copyright = "Public Domain / CC0 (Mutopia Project Urtext)"
             
             if len(score.parts) >= 2:
@@ -58,14 +80,37 @@ def convert_ly_to_mxl(ly_source_path: Path, out_mxl_path: Path, title: str, comp
             out_mxl_path.parent.mkdir(parents=True, exist_ok=True)
             score.write("musicxml", fp=str(out_mxl_path))
             
+            # Post-process generated MusicXML to guarantee clean metadata
             with zipfile.ZipFile(out_mxl_path, "r") as zf:
                 xml_names = [n for n in zf.namelist() if (n.endswith('.xml') or n.endswith('.musicxml')) and not n.startswith('META-INF')]
-                if xml_names:
-                    root = ET.fromstring(zf.read(xml_names[0]))
-                    notes = len([n for n in root.findall(".//note") if n.find("pitch") is not None])
-                    measures = len(root.findall(".//part[1]/measure"))
-                    return True, notes, measures, "OK"
-            return False, 0, 0, "No XML"
+                if not xml_names:
+                    return False, 0, 0, "No XML"
+                xml_fn = xml_names[0]
+                root = ET.fromstring(zf.read(xml_fn))
+                
+                # Sanitize all text fields in XML
+                for elem in root.iter():
+                    if elem.text and any("\u4e00" <= ch <= "\u9fff" for ch in elem.text):
+                        elem.text = clean_text(elem.text)
+                        
+                notes = len([n for n in root.findall(".//note") if n.find("pitch") is not None])
+                measures = len(root.findall(".//part[1]/measure"))
+                clean_xml_data = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+                
+            # Re-pack cleanly
+            tmp_mxl = out_mxl_path.with_suffix(".tmp.mxl")
+            with zipfile.ZipFile(tmp_mxl, "w", compression=zipfile.ZIP_DEFLATED) as new_zf:
+                container_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<container>
+  <rootfiles>
+    <rootfile full-path="{xml_fn}"/>
+  </rootfiles>
+</container>"""
+                new_zf.writestr("META-INF/container.xml", container_content)
+                new_zf.writestr(xml_fn, clean_xml_data)
+            tmp_mxl.replace(out_mxl_path)
+            
+            return True, notes, measures, "OK"
         except Exception as e:
             return False, 0, 0, str(e)
 
@@ -75,43 +120,44 @@ def process_burgmuller():
     print("=======================================================")
     
     titles_map = {
-        "25EF-01": "No.01 La Candeur (坦白 / 真诚)",
-        "25EF-02": "No.02 L'Arabesque (阿拉伯风格曲)",
-        "25EF-03": "No.03 Pastorale (牧歌)",
-        "25EF-04": "No.04 Petite réunion (小聚会)",
-        "25EF-05": "No.05 Innocence (天真 / 纯洁)",
-        "25EF-06": "No.06 Progrès (进步)",
-        "25EF-07": "No.07 Le courant limpide (清澈的溪水)",
-        "25EF-08": "No.08 La gracieuse (优美 / 优雅)",
-        "25EF-09": "No.09 La chasse (打猎 / 狩猎)",
-        "25EF-10": "No.10 Tendre fleur (娇嫩的花朵)",
-        "25EF-11": "No.11 La bergeronnette (鹡鸰 / 溪边鸟)",
-        "25EF-12": "No.12 L'adieu (告别 / 离别)",
-        "25EF-13": "No.13 Consolation (安慰)",
-        "25EF-14": "No.14 La styrienne (斯蒂利亚人 / 叙利亚舞曲)",
-        "25EF-15": "No.15 Ballade (叙事曲)",
-        "25EF-16": "No.16 Douce plainte (温和的抱怨 / 叹息)",
-        "25EF-17": "No.17 La babillarde (多话的人 / 唠叨)",
-        "25EF-18": "No.18 Inquiétude (忧虑 / 不安)",
+        "25EF-01": ("No.01 La Candeur", "La Candeur"),
+        "25EF-02": ("No.02 L'Arabesque", "L'Arabesque"),
+        "25EF-03": ("No.03 Pastorale", "Pastorale"),
+        "25EF-04": ("No.04 Petite réunion", "Petite réunion"),
+        "25EF-05": ("No.05 Innocence", "Innocence"),
+        "25EF-06": ("No.06 Progrès", "Progrès"),
+        "25EF-07": ("No.07 Le courant limpide", "Le courant limpide"),
+        "25EF-08": ("No.08 La gracieuse", "La gracieuse"),
+        "25EF-09": ("No.09 La chasse", "La chasse"),
+        "25EF-10": ("No.10 Tendre fleur", "Tendre fleur"),
+        "25EF-11": ("No.11 La bergeronnette", "La bergeronnette"),
+        "25EF-12": ("No.12 L'adieu", "L'adieu"),
+        "25EF-13": ("No.13 Consolation", "Consolation"),
+        "25EF-14": ("No.14 La styrienne", "La styrienne"),
+        "25EF-15": ("No.15 Ballade", "Ballade"),
+        "25EF-16": ("No.16 Douce plainte", "Douce plainte"),
+        "25EF-17": ("No.17 La babillarde", "La babillarde"),
+        "25EF-18": ("No.18 Inquiétude", "Inquiétude"),
     }
     
     out_dir = SCORES_DIR / "Burgmuller" / "mxl_scores"
     count = 0
-    for key, desc in titles_map.items():
+    for key, (t_num, t_name) in titles_map.items():
         ly_files = list((MUTOPIA_REPO / "BurgmullerJFF" / "O100" / key).glob("*.ly"))
         if ly_files:
-            fn = f"Burgmuller_Op100_{key.replace('25EF-', 'No_')}_{desc.split()[1]}.mxl"
+            clean_fn_title = t_name.replace("'", "").replace(" ", "_")
+            fn = f"Burgmuller_Op100_{key.replace('25EF-', 'No_')}_{clean_fn_title}.mxl"
             ok, n, m, msg = convert_ly_to_mxl(
                 ly_files[0], out_dir / fn,
-                title=f"25 Études faciles Op.100 - {desc}",
+                title=f"25 Études faciles Op.100 - {t_num} {t_name}",
                 composer="Johann Friedrich Burgmüller (1806-1874)",
-                subtitle=desc
+                subtitle=f"{t_num} {t_name}"
             )
             if ok:
                 count += 1
-                print(f"  ✓ {desc:35} | {m:2} ms | {n:4} notes -> {fn}")
+                print(f"  ✓ {t_num:25} | {m:2} ms | {n:4} notes -> {fn}")
             else:
-                print(f"  ✗ {desc}: {msg}")
+                print(f"  ✗ {t_name}: {msg}")
     print(f"✨ 布格缪勒 Op.100 成功导入: {count} 首！")
 
 def process_bach_beginner():
@@ -129,7 +175,7 @@ def process_bach_beginner():
         if lys:
             ly_f = lys[0]
             bwv = ad.name
-            t_name = f"Notebook for Anna Magdalena Bach ({bwv})"
+            t_name = f"Notebook for Anna Magdalena Bach - {bwv}"
             fn = f"Bach_Anna_Magdalena_{bwv}.mxl"
             ok, n, m, msg = convert_ly_to_mxl(
                 ly_f, out_anna / fn,
@@ -152,7 +198,7 @@ def process_bach_beginner():
         if lys:
             ly_f = lys[0]
             bwv = pd.name
-            t_name = f"Little Prelude ({bwv})"
+            t_name = f"Little Prelude - {bwv}"
             fn = f"Bach_Little_Prelude_{bwv}.mxl"
             ok, n, m, msg = convert_ly_to_mxl(
                 ly_f, out_preludes / fn,
@@ -175,7 +221,8 @@ def process_bach_beginner():
         if lys:
             ly_f = lys[0]
             bwv = sd.name
-            t_name = f"Three-Part Invention / Sinfonia ({bwv})"
+            num_str = f"No.{int(bwv.replace('BWV', '')) - 786:02d}"
+            t_name = f"Three-Part Invention {num_str} - {bwv}"
             fn = f"Bach_Sinfonia_{bwv}.mxl"
             ok, n, m, msg = convert_ly_to_mxl(
                 ly_f, out_sinf / fn,
@@ -201,9 +248,9 @@ def process_beethoven_and_sonatinas():
         fn = "Beethoven_Fur_Elise_WoO59.mxl"
         ok, n, m, msg = convert_ly_to_mxl(
             elise_lys[0], out_sonatinas / "Beethoven_Easy_Pieces" / fn,
-            title="Für Elise (致爱丽丝) - Bagatelle in A minor, WoO 59",
+            title="Für Elise - Bagatelle in A minor, WoO 59",
             composer="Ludwig van Beethoven (1770-1827)",
-            subtitle="Bagatelle in A minor (WoO 59)"
+            subtitle="Bagatelle in A minor, WoO 59"
         )
         if ok:
             print(f"  ✓ 贝多芬《致爱丽丝》WoO 59: {m} ms, {n} notes -> {fn}")
@@ -216,7 +263,7 @@ def process_beethoven_and_sonatinas():
             fn = f"Beethoven_{d.name}.mxl"
             ok, n, m, msg = convert_ly_to_mxl(
                 lys[0], out_sonatinas / "Beethoven_Op49_Sonatas" / fn,
-                title=f"Beethoven Sonata Op. 49 ({d.name})",
+                title=f"Piano Sonata Op. 49 - {d.name}",
                 composer="Ludwig van Beethoven (1770-1827)",
                 subtitle=d.name
             )
@@ -231,7 +278,7 @@ def process_beethoven_and_sonatinas():
             fn = f"Kuhlau_Op20_No1_{d.name}.mxl"
             ok, n, m, msg = convert_ly_to_mxl(
                 lys[0], out_sonatinas / "Kuhlau_Op20_Sonatinas" / fn,
-                title=f"Kuhlau Sonatina Op. 20 No. 1 ({d.name})",
+                title=f"Sonatina Op. 20 No. 1 - {d.name}",
                 composer="Friedrich Kuhlau (1786-1832)",
                 subtitle=d.name
             )
@@ -281,12 +328,20 @@ def process_tchaikovsky_and_schumann():
                 print(f"  ✓ [舒曼少年曲集] {d.name:30} | {m:2} ms | {n:4} notes -> {fn}")
     print(f"✨ 舒曼少年曲集增补: {s_count} 首！")
 
+def ensure_mutopia_repo():
+    if not MUTOPIA_REPO.exists():
+        print("Cloning Mutopia sparse repo...")
+        target_dir = "/tmp/mutopia_repo"
+        subprocess.run(["git", "clone", "--depth", "1", "--filter=blob:none", "--sparse", "https://github.com/MutopiaProject/MutopiaProject", target_dir], check=True)
+        subprocess.run(["git", "-C", target_dir, "sparse-checkout", "set", "ftp/BachJS", "ftp/BurgmullerJFF", "ftp/BeethovenLv", "ftp/KuhlauF", "ftp/TchaikovskyPI", "ftp/SchumannR"], check=True)
+
 def main():
+    ensure_mutopia_repo()
     process_burgmuller()
     process_bach_beginner()
     process_beethoven_and_sonatinas()
     process_tchaikovsky_and_schumann()
-    print("\n✅ 全量初中级权威真谱构建完成！")
+    print("\n✅ 全量初中级权威真谱构建完成 (100% 纯英文规范标题)！")
 
 if __name__ == "__main__":
     main()

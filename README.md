@@ -2,10 +2,10 @@
 
 [![MusicXML](https://img.shields.io/badge/Format-MusicXML_%2F_MXL-blue.svg)](https://www.w3.org/2021/06/musicxml40/)
 [![License: CC0 / Public Domain](https://img.shields.io/badge/License-Public_Domain_%2F_CC0-brightgreen.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Total Scores](https://img.shields.io/badge/Total_Scores-5%2C080_Scores-orange.svg)](#-收录作品集概览)
+[![Total Scores](https://img.shields.io/badge/Total_Scores-5%2C077_Scores-orange.svg)](#-收录作品集概览)
 [![Piano Solo](https://img.shields.io/badge/Instrument-100%25_Grand_Staff_Piano_Solo-purple.svg)](#)
 
-本开源库收录了经过彻底质量审计、去重清洗与真伪核验的**高品质古典与专业数字乐谱库**。全库现存 **5,080** 首 100% 真实原典乐谱与权威数字化转录谱，全部统一封装为标准压缩版 `.mxl` (MusicXML) 格式，提供完整中英文双语索引与结构化机器元数据。
+本开源库收录了经过彻底质量审计、去重清洗与真伪核验的**高品质古典与专业数字乐谱库**。全库现存 **5,077** 首 100% 真实原典乐谱与权威数字化转录谱，全部统一封装为标准压缩版 `.mxl` (MusicXML) 格式，提供完整中英文双语索引与结构化机器元数据。
 
 ---
 
@@ -19,9 +19,9 @@
 | [**Grieg_Lyric_Pieces**](./scores/Grieg_Lyric_Pieces) | 爱德华·格里格《抒情小品集》(Op.12 ~ Op.71 全套 10 卷完整版，含第一卷 Op.12 初级名作) | **66** 首 | 钢琴双行大谱表 | Public Domain / CC0 (洛桑理工 DCMLab) |
 | [**Schumann_Album_for_the_Young**](./scores/Schumann_Album_for_the_Young) | 罗伯特·舒曼《少年曲集》(Op.68 权威版，含士兵进行曲、快乐的农夫、猎歌、骑士等) | **32** 首 | 钢琴双行大谱表 | Public Domain / CC0 (ISMIR & Mutopia) |
 | [**Burgmuller**](./scores/Burgmuller) | 约瑟夫·弗里德里希·布格缪勒《25首简易与进阶练习曲》(Op.100 真实原典版，含坦白、阿拉伯风格曲、牧歌、清澈的溪水等) | **18** 首 | 钢琴双行大谱表 | Public Domain / CC0 (Mutopia Project) |
-| [**Sonatinas**](./scores/Sonatinas) | 贝多芬《致爱丽丝》(WoO 59)、贝多芬《简易奏鸣曲两首》(Op.49 No.1&2)、库劳《小奏鸣曲》(Op.20 No.1 全乐章) | **11** 首 | 钢琴双行大谱表 | Public Domain / CC0 (Mutopia Project) |
+| [**Sonatinas**](./scores/Sonatinas) | 贝多芬《致爱丽丝》(WoO 59)、贝多芬《简易奏鸣曲两首》(Op.49 No.1&2)、库劳《小奏鸣曲》(Op.20 No.1 全乐章) | **8** 首 | 钢琴双行大谱表 | Public Domain / CC0 (Mutopia Project) |
 | [**Tchaikovsky_Childrens_Album**](./scores/Tchaikovsky_Childrens_Album) | 柴可夫斯基《儿童钢琴曲集》(Op.39 真谱，含早晨的祈祷、木兵进行曲、老法国之歌) | **3** 首 | 钢琴双行大谱表 | Public Domain / CC0 (Mutopia Project) |
-| **全库合计** | **100% 真实原典与权威人工校对数字乐谱库** | **5,080** 首 | **100% 真实音符与结构** | **含 global_scores_index.json** |
+| **全库合计** | **100% 真实原典与权威人工校对数字乐谱库** | **5,077** 首 | **100% 真实音符与结构** | **含 global_scores_index.json** |
 
 ---
 

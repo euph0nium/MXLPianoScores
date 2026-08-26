@@ -1,8 +1,8 @@
 # 📚 全局古典与教学钢琴独奏乐谱总索引目录 (Global Piano Solo Catalog)
 
-> **生成时间**：2026-08-27 01:18:04  
-> **乐谱总数**：**5,080** 首 100% 结构校验纯钢琴独奏 (.mxl)  
-> **数据规模**：**44.94 MB** (涵盖 12 大独立数据集)  
+> **生成时间**：2026-08-27 01:24:30  
+> **乐谱总数**：**5,077** 首 100% 结构校验纯钢琴独奏 (.mxl)  
+> **数据规模**：**45.65 MB** (涵盖 12 大独立数据集)  
 > **谱表配置**：🎹 **100% 钢琴双行大谱表 (右手高音谱表 + 左手低音谱表)**  
 > **版权协议**：**Public Domain / CC0 1.0 / CC BY-NC-SA (全部开源可免授权检索与渲染)**
 
@@ -27,9 +27,9 @@
 
 ---
 
-## 📁 数据集：[scores](file:///Users/shiyuli/Dev/Scores/scores) (共 5080 首)
+## 📁 数据集：[scores](file:///Users/shiyuli/Dev/Scores/scores) (共 5077 首)
 
-### 🎼 作品集：scores (scores) - 收录 5080 首
+### 🎼 作品集：scores (scores) - 收录 5077 首
 
 | 序号 | 曲目名称 (Title) | 调性/拍号 | 乐谱文件链接 (.mxl) | 谱表配置 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -93,5 +93,5 @@
 | No. 0058 | **Bach Invention No 06 BWV777 E major** | 标准双谱表 | [Bach_Invention_No_06_BWV777_E_major.mxl](file:///Users/shiyuli/Dev/Scores/scores/Bach_Beginner/mxl_scores/Two_Part_Inventions_BWV772_786/Bach_Invention_No_06_BWV777_E_major.mxl) | 双行大谱表 |
 | No. 0059 | **Bach Invention No 07 BWV778 E minor** | 标准双谱表 | [Bach_Invention_No_07_BWV778_E_minor.mxl](file:///Users/shiyuli/Dev/Scores/scores/Bach_Beginner/mxl_scores/Two_Part_Inventions_BWV772_786/Bach_Invention_No_07_BWV778_E_minor.mxl) | 双行大谱表 |
 | No. 0060 | **Bach Invention No 08 BWV779 F major** | 标准双谱表 | [Bach_Invention_No_08_BWV779_F_major.mxl](file:///Users/shiyuli/Dev/Scores/scores/Bach_Beginner/mxl_scores/Two_Part_Inventions_BWV772_786/Bach_Invention_No_08_BWV779_F_major.mxl) | 双行大谱表 |
-| ... | *(剩余 5020 首曲目详见数据集专属 manifest.json)* | - | - | - |
+| ... | *(剩余 5017 首曲目详见数据集专属 manifest.json)* | - | - | - |
 
