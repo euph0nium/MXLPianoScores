@@ -2,20 +2,76 @@
 """
 Generate comprehensive composer directories, README.md biographies, and info.json
 structured metadata for all major composers represented in the piano score library.
+All folders and identifiers are in English.
 """
 
 import os
 import json
 
-BASE_DIR = "/Users/shiyuli/Dev/Scores/作家信息"
+BASE_DIR = "/Users/shiyuli/Dev/Scores/Composers"
 
 COMPOSERS_DATA = [
+    {
+        "id": "chopin",
+        "name": "弗雷德里克·肖邦",
+        "original_name": "Frédéric François Chopin",
+        "short_name": "肖邦",
+        "folder_name": "Chopin",
+        "birth_year": 1810,
+        "death_year": 1849,
+        "nationality": "波兰 / 法国",
+        "period": "浪漫主义时期 (Romantic)",
+        "title": "钢琴诗人 (The Poet of the Piano)",
+        "avatar": "avatar.jpg",
+        "illustration": "illustration.jpg",
+        "library_collections": ["KernScores/chopin"],
+        "bio_short": "19世纪浪漫主义时期最伟大的作曲家和钢琴演奏家之一，被誉为‘钢琴诗人’。其毕生创作专注于钢琴独奏，将旋律的诗意、细腻的织体与自由速度（Rubato）发挥到了极致。",
+        "bio_full": "弗雷德里克·肖邦出生于波兰华沙附近的热拉佐瓦-沃拉。二十岁时前往巴黎并在欧洲音乐界赢得极高声誉。肖邦将波兰传统的民间音乐语汇（如玛祖卡、波兰舞曲）与典雅的法式沙龙文化相融合，创作出兼具深沉爱国情怀与诗意色彩的永恒杰作。他的音乐旋律优美动人、和声丰富，是浪漫主义钢琴音乐的最高典范。",
+        "masterpieces": [
+            {"title": "降E大调夜曲 Op.9 No.2", "genre": "Nocturne", "opus": "Op.9 No.2", "key": "E-flat major"},
+            {"title": "升c小调夜曲 遗作", "genre": "Nocturne", "opus": "B.49", "key": "C-sharp minor"},
+            {"title": "c小调练习曲「革命」", "genre": "Étude", "opus": "Op.10 No.12", "key": "C minor"},
+            {"title": "E大调练习曲「离别」", "genre": "Étude", "opus": "Op.10 No.3", "key": "E major"},
+            {"title": "降D大调「一分钟/小狗圆舞曲」", "genre": "Waltz", "opus": "Op.64 No.1", "key": "D-flat major"},
+            {"title": "升c小调圆舞曲", "genre": "Waltz", "opus": "Op.64 No.2", "key": "C-sharp minor"},
+            {"title": "降A大调「英雄波兰舞曲」", "genre": "Polonaise", "opus": "Op.53", "key": "A-flat major"},
+            {"title": "24首前奏曲「雨滴」", "genre": "Prelude", "opus": "Op.28 No.15", "key": "D-flat major"},
+            {"title": "g小调第一叙事曲", "genre": "Ballade", "opus": "Op.23", "key": "G minor"}
+        ]
+    },
+    {
+        "id": "bach",
+        "name": "约翰·塞巴斯蒂安·巴赫",
+        "original_name": "Johann Sebastian Bach",
+        "short_name": "巴赫",
+        "folder_name": "Bach",
+        "birth_year": 1685,
+        "death_year": 1750,
+        "nationality": "德国",
+        "period": "巴洛克时期 (Baroque)",
+        "title": "西方现代音乐之父 (The Father of Western Music)",
+        "avatar": "avatar.jpg",
+        "illustration": "illustration.jpg",
+        "library_collections": ["Bach_Beginner", "KernScores/bach"],
+        "bio_short": "巴洛克音乐集大成者，整部西方古典音乐史中最伟大的奠基人，被尊称为‘西方音乐之父’。其《平均律键盘曲集》被誉为键盘乐器的‘旧约圣经’。",
+        "bio_full": "约翰·塞巴斯蒂安·巴赫精通管风琴、羽管键琴与小提琴，将复调对位法、赋格与和声体系推向不可逾越的艺术巅峰。其音乐兼具深邃的宗教神圣感与严密的数学逻辑结构，为近现代键盘音乐打下了坚实基石。",
+        "masterpieces": [
+            {"title": "C大调前奏曲 (平均律第一卷 BWV 846)", "genre": "Prelude", "opus": "BWV 846", "key": "C major"},
+            {"title": "G大调小步舞曲 (安娜笔记本)", "genre": "Minuet", "opus": "BWV Anh. 114", "key": "G major"},
+            {"title": "g小调小步舞曲 (安娜笔记本)", "genre": "Minuet", "opus": "BWV Anh. 115", "key": "G minor"},
+            {"title": "C大调二部创意曲 No.1", "genre": "Invention", "opus": "BWV 772", "key": "C major"},
+            {"title": "F大调二部创意曲 No.8", "genre": "Invention", "opus": "BWV 779", "key": "F major"},
+            {"title": "哥德堡变奏曲「萨拉班德主题」", "genre": "Variation", "opus": "BWV 988", "key": "G major"},
+            {"title": "d小调托卡塔与赋格", "genre": "Toccata & Fugue", "opus": "BWV 565", "key": "D minor"},
+            {"title": "G弦上的咏叹调", "genre": "Air", "opus": "BWV 1068", "key": "D major"}
+        ]
+    },
     {
         "id": "beethoven",
         "name": "路德维希·凡·贝多芬",
         "original_name": "Ludwig van Beethoven",
         "short_name": "贝多芬",
-        "folder_name": "贝多芬",
+        "folder_name": "Beethoven",
         "birth_year": 1770,
         "death_year": 1827,
         "nationality": "德国",
@@ -42,7 +98,7 @@ COMPOSERS_DATA = [
         "name": "沃尔夫冈·阿玛多伊斯·莫扎特",
         "original_name": "Wolfgang Amadeus Mozart",
         "short_name": "莫扎特",
-        "folder_name": "莫扎特",
+        "folder_name": "Mozart",
         "birth_year": 1756,
         "death_year": 1791,
         "nationality": "奥地利",
@@ -69,7 +125,7 @@ COMPOSERS_DATA = [
         "name": "约瑟夫·海顿",
         "original_name": "Franz Joseph Haydn",
         "short_name": "海顿",
-        "folder_name": "海顿",
+        "folder_name": "Haydn",
         "birth_year": 1732,
         "death_year": 1809,
         "nationality": "奥地利",
@@ -94,7 +150,7 @@ COMPOSERS_DATA = [
         "name": "卡尔·车尔尼",
         "original_name": "Carl Czerny",
         "short_name": "车尔尼",
-        "folder_name": "车尔尼",
+        "folder_name": "Czerny",
         "birth_year": 1791,
         "death_year": 1857,
         "nationality": "奥地利",
@@ -119,7 +175,7 @@ COMPOSERS_DATA = [
         "name": "约瑟夫·弗里德里希·布格缪勒",
         "original_name": "Johann Friedrich Franz Burgmüller",
         "short_name": "布格缪勒",
-        "folder_name": "布格缪勒",
+        "folder_name": "Burgmuller",
         "birth_year": 1806,
         "death_year": 1874,
         "nationality": "德国 / 法国",
@@ -146,7 +202,7 @@ COMPOSERS_DATA = [
         "name": "斐迪南·拜厄",
         "original_name": "Ferdinand Beyer",
         "short_name": "拜厄",
-        "folder_name": "拜厄",
+        "folder_name": "Beyer",
         "birth_year": 1803,
         "death_year": 1863,
         "nationality": "德国",
@@ -169,7 +225,7 @@ COMPOSERS_DATA = [
         "name": "夏尔-路易·哈农",
         "original_name": "Charles-Louis Hanon",
         "short_name": "哈农",
-        "folder_name": "哈农",
+        "folder_name": "Hanon",
         "birth_year": 1819,
         "death_year": 1900,
         "nationality": "法国",
@@ -191,7 +247,7 @@ COMPOSERS_DATA = [
         "name": "罗伯特·舒曼",
         "original_name": "Robert Schumann",
         "short_name": "舒曼",
-        "folder_name": "舒曼",
+        "folder_name": "Schumann",
         "birth_year": 1810,
         "death_year": 1856,
         "nationality": "德国",
@@ -216,7 +272,7 @@ COMPOSERS_DATA = [
         "name": "彼得·伊里奇·柴可夫斯基",
         "original_name": "Pyotr Ilyich Tchaikovsky",
         "short_name": "柴可夫斯基",
-        "folder_name": "柴可夫斯基",
+        "folder_name": "Tchaikovsky",
         "birth_year": 1840,
         "death_year": 1893,
         "nationality": "俄罗斯",
@@ -242,7 +298,7 @@ COMPOSERS_DATA = [
         "name": "爱德华·格里格",
         "original_name": "Edvard Hagerup Grieg",
         "short_name": "格里格",
-        "folder_name": "格里格",
+        "folder_name": "Grieg",
         "birth_year": 1843,
         "death_year": 1907,
         "nationality": "挪威",
@@ -267,7 +323,7 @@ COMPOSERS_DATA = [
         "name": "穆齐奥·克莱门蒂",
         "original_name": "Muzio Clementi",
         "short_name": "克莱门蒂",
-        "folder_name": "克莱门蒂",
+        "folder_name": "Clementi",
         "birth_year": 1752,
         "death_year": 1832,
         "nationality": "意大利 / 英国",
@@ -293,7 +349,7 @@ COMPOSERS_DATA = [
         "name": "弗朗茨·舒伯特",
         "original_name": "Franz Peter Schubert",
         "short_name": "舒伯特",
-        "folder_name": "舒伯特",
+        "folder_name": "Schubert",
         "birth_year": 1797,
         "death_year": 1828,
         "nationality": "奥地利",
@@ -318,7 +374,7 @@ COMPOSERS_DATA = [
         "name": "约翰内斯·勃拉姆斯",
         "original_name": "Johannes Brahms",
         "short_name": "勃拉姆斯",
-        "folder_name": "勃拉姆斯",
+        "folder_name": "Brahms",
         "birth_year": 1833,
         "death_year": 1897,
         "nationality": "德国",
@@ -343,7 +399,7 @@ COMPOSERS_DATA = [
         "name": "斯科特·乔普林",
         "original_name": "Scott Joplin",
         "short_name": "乔普林",
-        "folder_name": "乔普林",
+        "folder_name": "Joplin",
         "birth_year": 1868,
         "death_year": 1917,
         "nationality": "美国",
@@ -367,7 +423,7 @@ COMPOSERS_DATA = [
         "name": "弗里德里希·库劳",
         "original_name": "Friedrich Daniel Rudolf Kuhlau",
         "short_name": "库劳",
-        "folder_name": "库劳",
+        "folder_name": "Kuhlau",
         "birth_year": 1786,
         "death_year": 1832,
         "nationality": "德国 / 丹麦",
@@ -396,8 +452,9 @@ def generate_markdown(comp):
     lines.append("## 📌 基本信息\n")
     lines.append("| 字段 | 信息 |")
     lines.append("| :--- | :--- |")
-    lines.append(f"| **中文全名** | {comp['name']} |")
+    lines.append(f"| **中文名** | {comp['name']} |")
     lines.append(f"| **外文名** | {comp['original_name']} |")
+    lines.append(f"| **目录名称** | `{comp['folder_name']}` |")
     lines.append(f"| **生卒年月** | {comp['birth_year']}年 － {comp['death_year']}年 |")
     lines.append(f"| **国籍** | {comp['nationality']} |")
     lines.append(f"| **时期流派** | {comp['period']} |")
@@ -415,9 +472,42 @@ def generate_markdown(comp):
     for col in comp['library_collections']:
         lines.append(f"- `/{col}`")
     lines.append("\n---\n")
-    lines.append("## 🎨 视觉资产（淡雅水彩插画风格规范）\n")
+    lines.append("## 🎨 视觉资产规范\n")
     lines.append(f"- **标准矩形头像 (`avatar.jpg`)**: 1:1 纯矩形 JPG 格式，淡雅水彩工笔插画，水彩背景完整延展填满矩形。")
     lines.append(f"- **全景情境插画 (`illustration.jpg`)**: 1:1 音乐家艺术演奏/创作情境图。")
+    return "\n".join(lines)
+
+def generate_root_readme():
+    lines = []
+    lines.append("# 🎵 Composers Database (古典音乐家数据库)\n")
+    lines.append("本目录为当前乐谱库（5,897+ 首 MusicXML 乐谱）收录的所有核心古典音乐作曲家提供完整的**艺术生平介绍**、**代表作目录**、**对应本地乐谱路径**以及**标准化视觉资产（1:1 满版淡雅水彩工笔插画 JPG）**。\n")
+    lines.append("---\n")
+    lines.append("## 🎨 视觉设计与技术规范\n")
+    lines.append("- **风格定位**：淡雅水彩工笔插画风（Subtle Pastel Watercolor & Fine Line Art）")
+    lines.append("- **格式规范**：**标准 JPG 格式（画质 95%）**，1:1 纯矩形满版画幅（无圆形边框限制，水彩背景无缝填满整个矩形）。")
+    lines.append("- **命名规则**：根目录与作家子目录均采用**英文标准名称（PascalCase）**，便于代码库工程化维护与 API 路由对接。")
+    lines.append("- **资产文件**：")
+    lines.append("  - `avatar.jpg`: 1:1 满版矩形胸像头像（适合列表、作者主页，支持 App 自由裁剪）")
+    lines.append("  - `illustration.jpg`: 1:1 钢琴/乐器全景艺术情境插画（适合专栏封面、介绍背景）")
+    lines.append("  - `info.json`: 供 App / Web 客户端直接解析调用的结构化数据")
+    lines.append("  - `README.md`: Markdown 格式的中英文生平与权威导聆\n")
+    lines.append("---\n")
+    lines.append("## 📂 目录结构 (Directory Structure)\n")
+    lines.append("```text\nComposers/\n├── README.md                      # 全局作曲家总索引\n├── Chopin/                        # Frédéric Chopin\n│   ├── avatar.jpg                 # 满版淡雅水彩头像 (1:1 JPG)\n│   ├── illustration.jpg           # 全景演奏艺术插画 (1:1 JPG)\n│   ├── README.md                  # 生平与代表作导聆\n│   └── info.json                  # App 结构化 JSON 元数据\n├── Bach/                          # Johann Sebastian Bach\n│   ├── avatar.jpg\n│   ├── README.md\n│   └── info.json\n├── Beethoven/                     # Ludwig van Beethoven\n├── Mozart/                        # Wolfgang Amadeus Mozart\n└── ...                            # 更多作曲家目录\n```\n")
+    lines.append("---\n")
+    lines.append("## 🎼 全库作曲家名录索引 (Composers Catalog)\n")
+    lines.append("| 目录 (Folder) | 中文名 | 外文全名 (Full Name) | 艺术流派 | 代表性称号 | 本地乐谱库专集 | 目录链接 |")
+    lines.append("| :--- | :--- | :--- | :--- | :--- | :--- | :--- |")
+
+    for comp in COMPOSERS_DATA:
+        folder = comp["folder_name"]
+        zh_name = comp["name"]
+        en_name = comp["original_name"]
+        period = comp["period"].split("/")[0].strip()
+        title = comp["title"].split("(")[0].strip().replace("“", "").replace("”", "")
+        cols = ", ".join([f"`{c}`" for c in comp["library_collections"][:2]])
+        lines.append(f"| **`{folder}`** | {zh_name} | {en_name} | {period} | {title} | {cols} | [进入 `{folder}`](./{folder}/README.md) |")
+
     return "\n".join(lines)
 
 def main():
@@ -435,6 +525,7 @@ def main():
             "name": comp["name"],
             "original_name": comp["original_name"],
             "short_name": comp["short_name"],
+            "folder_name": comp["folder_name"],
             "birth_year": comp["birth_year"],
             "death_year": comp["death_year"],
             "nationality": comp["nationality"],
@@ -457,9 +548,15 @@ def main():
             f.write(readme_content)
 
         generated_count += 1
-        print(f"✅ Generated: {comp['folder_name']} (info.json + README.md)")
+        print(f"✅ Synced: Composers/{comp['folder_name']} (info.json + README.md)")
 
-    print(f"\n🎉 Successfully generated profiles for {generated_count} composers!")
+    # Write root README.md
+    root_readme_path = os.path.join(BASE_DIR, "README.md")
+    with open(root_readme_path, "w", encoding="utf-8") as f:
+        f.write(generate_root_readme())
+    print(f"✅ Synced: Composers/README.md")
+
+    print(f"\n🎉 Successfully synced all {generated_count} composer profiles in English directory structure!")
 
 if __name__ == '__main__':
     main()

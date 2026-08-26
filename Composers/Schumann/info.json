@@ -1,0 +1,58 @@
+{
+  "id": "schumann",
+  "name": "罗伯特·舒曼",
+  "original_name": "Robert Schumann",
+  "short_name": "舒曼",
+  "folder_name": "Schumann",
+  "birth_year": 1810,
+  "death_year": 1856,
+  "nationality": "德国",
+  "period": "浪漫主义全盛期 (Romantic)",
+  "title": "浪漫主义音乐诗人 / 音乐评论宗师",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "Schumann_Album_for_the_Young",
+    "OpenScore/Schumann"
+  ],
+  "bio_short": "德奥浪漫主义音乐巅峰代表，兼具深邃文学修养与梦幻音乐构思的天才。其《童年情景》与《少年钢琴曲集》以纯真诗意与细腻织体闻名遐迩。",
+  "bio_full": "舒曼出生于德国茨维考的书商家庭，自幼兼具卓越的文学才华与音乐天赋。他创办《新音乐杂志》并极具前瞻性地发掘了肖邦与勃拉姆斯。舒曼的钢琴音乐充满双重性格（激昂热烈的弗洛雷斯坦与沉思内省的约瑟比乌斯），善于捕捉瞬息万变的情感微澜。其《少年钢琴曲集 Op.68》专为儿童与青少年的音乐想象力而作，而《童年情景 Op.15》（包含名作《梦幻曲》）更是以成人的温情目光回望童年时光的至臻杰作。",
+  "masterpieces": [
+    {
+      "title": "梦幻曲 (Traumerei, 选自《童年情景》)",
+      "genre": "Character Piece",
+      "opus": "Op.15 No.7",
+      "key": "F major"
+    },
+    {
+      "title": "勇敢的骑士 (选自《少年曲集》)",
+      "genre": "Character Piece",
+      "opus": "Op.68 No.8",
+      "key": "D minor"
+    },
+    {
+      "title": "快乐的农夫 (选自《少年曲集》)",
+      "genre": "Character Piece",
+      "opus": "Op.68 No.10",
+      "key": "F major"
+    },
+    {
+      "title": "狂欢节 (Carnaval)",
+      "genre": "Suite",
+      "opus": "Op.9",
+      "key": "Various"
+    },
+    {
+      "title": "克莱斯勒偶记 (Kreisleriana)",
+      "genre": "Suite",
+      "opus": "Op.16",
+      "key": "Various"
+    },
+    {
+      "title": "蝴蝶 (Papillons)",
+      "genre": "Suite",
+      "opus": "Op.2",
+      "key": "Various"
+    }
+  ]
+}

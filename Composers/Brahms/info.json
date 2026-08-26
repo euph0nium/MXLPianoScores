@@ -1,0 +1,58 @@
+{
+  "id": "brahms",
+  "name": "约翰内斯·勃拉姆斯",
+  "original_name": "Johannes Brahms",
+  "short_name": "勃拉姆斯",
+  "folder_name": "Brahms",
+  "birth_year": 1833,
+  "death_year": 1897,
+  "nationality": "德国",
+  "period": "浪漫主义全盛期 (Romantic)",
+  "title": "古典传统的坚守者 / 三B巨匠之一",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "KernScores/brahms",
+    "OpenScore/Brahms"
+  ],
+  "bio_short": "德国浪漫主义音乐大师，与巴赫、贝多芬并称为德国音乐史上的‘3B’巨匠。其晚期钢琴间奏曲与狂想曲沉郁内省、结构严密、情感深厚。",
+  "bio_full": "勃拉姆斯出生于汉堡，青年时期受到舒曼夫妇的大力推介。在19世纪激进的新德意志乐派狂潮中，勃拉姆斯坚持严格继承巴赫的对位法与贝多芬的古典奏鸣曲严密架构，创造出宏大雄浑与深沉内敛并存的崇高艺术风格。他的晚期钢琴小品集（Op.116至119间奏曲、狂想曲、叙事曲）被誉为‘写给钢琴的暮年沉思诗篇’。",
+  "masterpieces": [
+    {
+      "title": "b小调狂想曲",
+      "genre": "Rhapsody",
+      "opus": "Op.79 No.1",
+      "key": "B minor"
+    },
+    {
+      "title": "g小调狂想曲",
+      "genre": "Rhapsody",
+      "opus": "Op.79 No.2",
+      "key": "G minor"
+    },
+    {
+      "title": "A大调间奏曲",
+      "genre": "Intermezzo",
+      "opus": "Op.118 No.2",
+      "key": "A major"
+    },
+    {
+      "title": "降E大调圆舞曲",
+      "genre": "Waltz",
+      "opus": "Op.39 No.15",
+      "key": "A-flat major"
+    },
+    {
+      "title": "匈牙利舞曲第五号 (钢琴版)",
+      "genre": "Dance",
+      "opus": "WoO 1 No.5",
+      "key": "F-sharp minor"
+    },
+    {
+      "title": "帕格尼尼主题变奏曲",
+      "genre": "Variations",
+      "opus": "Op.35",
+      "key": "A minor"
+    }
+  ]
+}

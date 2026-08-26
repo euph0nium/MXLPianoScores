@@ -1,0 +1,45 @@
+{
+  "id": "beyer",
+  "name": "斐迪南·拜厄",
+  "original_name": "Ferdinand Beyer",
+  "short_name": "拜厄",
+  "folder_name": "Beyer",
+  "birth_year": 1803,
+  "death_year": 1863,
+  "nationality": "德国",
+  "period": "浪漫主义时期 (Romantic)",
+  "title": "钢琴启蒙教育奠基人",
+  "avatar": "avatar.jpg",
+  "illustration": "illustration.jpg",
+  "library_collections": [
+    "Beyer/Op_101"
+  ],
+  "bio_short": "德国钢琴家与著名音乐教育家。其《钢琴初级教程 Op.101》（通称‘拜厄’）是全球普及度最高、影响了几代琴童的经典钢琴启蒙教材。",
+  "bio_full": "拜厄活跃于19世纪中叶的德国莱茵地区，致力于普及钢琴基础教育。他编订的《钢琴初级教程 Op.101》以极其平缓温和的坡度，系统讲解了五线谱识读、双手独立协调、简单调性转换、音阶与琶音练习，并穿插了大量优美易懂的四手联弹曲目。历经一个半世纪的教学检验，拜厄教程依然是全球非专业与少儿钢琴启蒙最具知名度的入门大纲之一。",
+  "masterpieces": [
+    {
+      "title": "钢琴初级教程 Op.101 (全106条教程)",
+      "genre": "Method",
+      "opus": "Op.101",
+      "key": "Various"
+    },
+    {
+      "title": "单手与双手交替练习 (Op.101 No.1-12)",
+      "genre": "Exercise",
+      "opus": "Op.101 No.1-12",
+      "key": "C major"
+    },
+    {
+      "title": "双手并进练习与音阶练习",
+      "genre": "Exercise",
+      "opus": "Op.101 No.65-80",
+      "key": "Various"
+    },
+    {
+      "title": "流畅性与装饰音练习",
+      "genre": "Exercise",
+      "opus": "Op.101 No.81-106",
+      "key": "Various"
+    }
+  ]
+}
