@@ -1560,19 +1560,6 @@
     "valid": true
   },
   {
-    "id": 121,
-    "filename": "Augusta_Mary_Anne_Holmès_12_Thrînôdia_Thrînôdia_Chants_de_la_Kitharède_No.3.mxl",
-    "relative_path": "Augusta_Mary_Anne_Holmès/Mélodies_pour_piano_et_chant/Augusta_Mary_Anne_Holmès_12_Thrînôdia_Thrînôdia_Chants_de_la_Kitharède_No.3.mxl",
-    "composer": "Augusta Mary Anne Holmès",
-    "collection": "Mélodies pour piano et chant",
-    "title": "Thrînôdia (Chants de la Kitharède, No.3)",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 1,
-    "measures": 41,
-    "size_bytes": 11801,
-    "valid": true
-  },
-  {
     "id": 122,
     "filename": "Augusta_Mary_Anne_Holmès_13_Le_brick_l’Espérance_Le_brick_l_Espérance.mxl",
     "relative_path": "Augusta_Mary_Anne_Holmès/Mélodies_pour_piano_et_chant/Augusta_Mary_Anne_Holmès_13_Le_brick_l’Espérance_Le_brick_l_Espérance.mxl",
@@ -3468,32 +3455,6 @@
     "parts": 1,
     "measures": 70,
     "size_bytes": 20798,
-    "valid": true
-  },
-  {
-    "id": 268,
-    "filename": "Clémence_de_Grandval_1_Les_clochettes_Les_clochettes.mxl",
-    "relative_path": "Clémence_de_Grandval/6_Nouvelles_mélodies/Clémence_de_Grandval_1_Les_clochettes_Les_clochettes.mxl",
-    "composer": "Clémence de Grandval",
-    "collection": "6 Nouvelles mélodies",
-    "title": "Les clochettes",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 2,
-    "measures": 98,
-    "size_bytes": 14830,
-    "valid": true
-  },
-  {
-    "id": 269,
-    "filename": "Clémence_de_Grandval_4_Mignonne_Mignonne.mxl",
-    "relative_path": "Clémence_de_Grandval/6_Nouvelles_mélodies/Clémence_de_Grandval_4_Mignonne_Mignonne.mxl",
-    "composer": "Clémence de Grandval",
-    "collection": "6 Nouvelles mélodies",
-    "title": "Mignonne",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 2,
-    "measures": 74,
-    "size_bytes": 8427,
     "valid": true
   },
   {
@@ -6110,19 +6071,6 @@
     "valid": true
   },
   {
-    "id": 471,
-    "filename": "Franz_Liszt_2_Pace_non_trovo_Pace_non_trovo.mxl",
-    "relative_path": "Franz_Liszt/3_sonetti_di_Petrarca_S.270b/Franz_Liszt_2_Pace_non_trovo_Pace_non_trovo.mxl",
-    "composer": "Franz Liszt",
-    "collection": "3 sonetti di Petrarca S.270b",
-    "title": "Pace non trovo",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 2,
-    "measures": 111,
-    "size_bytes": 22799,
-    "valid": true
-  },
-  {
     "id": 472,
     "filename": "Franz_Schubert_1_Mignon_und_der_Harfner_Mignon_und_der_Harfner.mxl",
     "relative_path": "Franz_Schubert/4_Gesänge_aus_„Wilhelm_Meister“_D.877/Franz_Schubert_1_Mignon_und_der_Harfner_Mignon_und_der_Harfner.mxl",
@@ -8265,19 +8213,6 @@
     "parts": 1,
     "measures": 62,
     "size_bytes": 14137,
-    "valid": true
-  },
-  {
-    "id": 637,
-    "filename": "Georges_Bizet_6_Le_grillon_Le_grillon.mxl",
-    "relative_path": "Georges_Bizet/Feuilles_d’album/Georges_Bizet_6_Le_grillon_Le_grillon.mxl",
-    "composer": "Georges Bizet",
-    "collection": "Feuilles d’album",
-    "title": "Le grillon",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 2,
-    "measures": 238,
-    "size_bytes": 19453,
     "valid": true
   },
   {
@@ -12948,19 +12883,6 @@
     "valid": true
   },
   {
-    "id": 997,
-    "filename": "Liza_Lehmann_10_The_Sapphire_The_Sapphire.mxl",
-    "relative_path": "Liza_Lehmann/Songs_of_Love_and_Spring/Liza_Lehmann_10_The_Sapphire_The_Sapphire.mxl",
-    "composer": "Liza Lehmann",
-    "collection": "Songs of Love and Spring",
-    "title": "The Sapphire",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 2,
-    "measures": 29,
-    "size_bytes": 7012,
-    "valid": true
-  },
-  {
     "id": 998,
     "filename": "Liza_Lehmann_11_Love_Enthroned_Love_Enthroned.mxl",
     "relative_path": "Liza_Lehmann/Songs_of_Love_and_Spring/Liza_Lehmann_11_Love_Enthroned_Love_Enthroned.mxl",
@@ -12997,19 +12919,6 @@
     "parts": 1,
     "measures": 25,
     "size_bytes": 4221,
-    "valid": true
-  },
-  {
-    "id": 1001,
-    "filename": "Liza_Lehmann_3_In_April_Mood_In_April_Mood.mxl",
-    "relative_path": "Liza_Lehmann/Songs_of_Love_and_Spring/Liza_Lehmann_3_In_April_Mood_In_April_Mood.mxl",
-    "composer": "Liza Lehmann",
-    "collection": "Songs of Love and Spring",
-    "title": "In April Mood",
-    "instrumentation": "Piano Solo (Grand Staff: Treble & Bass)",
-    "parts": 2,
-    "measures": 42,
-    "size_bytes": 6559,
     "valid": true
   },
   {

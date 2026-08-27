@@ -2,7 +2,7 @@
 """
 Build Master Index and Comprehensive Catalog for all Classical & Pedagogical Piano Scores.
 Outputs:
-1. global_scores_index.json (Machine-readable full catalog of all 5,897+ pieces)
+1. global_scores_index.json (Machine-readable full catalog of all 2,828+ pieces)
 2. GLOBAL_PIANO_SOLO_CATALOG.md (Comprehensive human-readable guide with detailed introductions,
    composers, collections, pieces, pedagogical analyses, and file links).
 """
@@ -16,6 +16,7 @@ from pathlib import Path
 from datetime import datetime
 
 ROOT_DIR = Path("/Users/shiyuli/Dev/Scores")
+SCORES_DIR = ROOT_DIR / "scores"
 JSON_OUT = ROOT_DIR / "global_scores_index.json"
 MD_OUT = ROOT_DIR / "GLOBAL_PIANO_SOLO_CATALOG.md"
 
@@ -46,6 +47,26 @@ COMPOSER_CN_MAP = {
     "Scott Joplin": "斯科特·乔普林 (1868-1917)",
     "Antonio Vivaldi": "安东尼奥·维瓦尔第 (1678-1741)",
     "Arcangelo Corelli": "阿尔坎杰罗·科雷利 (1653-1713)",
+    "Anton Webern": "安东·韦伯恩 (1883-1945)",
+    "Johann Nepomuk Hummel": "约翰·尼波默克·胡梅尔 (1778-1837)",
+    "Mikalojus Konstantinas Ciurlionis": "米卡洛尤斯·丘尔廖尼斯 (1875-1911)",
+    "Burgmuller": "约翰·弗里德里希·布格缪勒 (1806-1874)",
+    "Sonatinas": "古典小奏鸣曲名家集",
+    "Bach_Beginner": "约翰·塞巴斯蒂安·巴赫 (初级与创意曲集)",
+    "Grieg_Lyric_Pieces": "爱德华·格里格 (抒情小品集全套)",
+    "Schumann_Album_for_the_Young": "罗伯特·舒曼 (少年曲集 Op.68)",
+    "Tchaikovsky_Childrens_Album": "彼得·伊里奇·柴可夫斯基 (儿童钢琴曲集 Op.39)",
+}
+
+DATASET_DESCRIPTIONS = {
+    "KernScores": ("斯坦福大学 CCARH 经典原典库 (巴赫/贝多芬/肖邦/莫扎特/海顿/斯卡拉蒂等)", "历经数十年学术校验的世界顶级乌尔文原典库 (Urtext Gold Standard)"),
+    "OpenScore": ("国际 OpenScore 跨时代经典艺术曲目纯钢琴大谱表独奏版", "国际同行盲审 CC0 1.0 Universal 出版级母版，强弱踏板表情完备"),
+    "Bach_Beginner": ("巴赫初级曲集 + 小前奏曲 + 二部创意曲全集", "复调音乐入门与中级对位双核触键核心教材"),
+    "Grieg_Lyric_Pieces": ("爱德华·格里格《抒情小品集》(10卷全套66首)", "洛桑理工 DCMLab 原典版，北欧诗意与细腻弱音"),
+    "Schumann_Album_for_the_Young": ("罗伯特·舒曼《少年曲集》(Op.68 全套43首精选)", "浪漫派和声色彩听觉、歌唱性旋律与多声部"),
+    "Burgmuller": ("布格缪勒《25首简易与进阶练习曲》(Op.100)", "旋律性与触键表现力兼备的初中级浪漫派名作"),
+    "Sonatinas": ("克莱门蒂Op.36 + 库劳 + 迪亚贝利 + 贝多芬等小奏鸣曲", "古典奏鸣曲式、阿尔贝蒂低音与快慢乐章对比"),
+    "Tchaikovsky_Childrens_Album": ("柴可夫斯基《儿童钢琴曲集》(Op.39)", "极具民谣色彩与生动画面感的中级名作"),
 }
 
 def clean_name(s: str) -> str:
@@ -90,11 +111,11 @@ def get_xml_info(mxl_p: Path):
         return {}
 
 def scan_all_datasets():
-    datasets = sorted([d for d in ROOT_DIR.iterdir() if d.is_dir() and not d.name.startswith('.') and d.name != 'scripts'])
+    datasets = sorted([d for d in SCORES_DIR.iterdir() if d.is_dir() and not d.name.startswith('.')])
     all_scores = []
     global_id = 0
 
-    print(f"Scanning {len(datasets)} datasets across workspace...")
+    print(f"Scanning {len(datasets)} datasets across scores directory...")
 
     for d in datasets:
         manifest_p = d / "scores_manifest.json"
@@ -103,10 +124,18 @@ def scan_all_datasets():
             try:
                 with open(manifest_p, 'r', encoding='utf-8') as f:
                     raw_m = json.load(f)
-                    for item in raw_m:
-                        fn = item.get('filename') or Path(item.get('relative_path', '')).name
-                        if fn:
-                            manifest_data[fn] = item
+                    if isinstance(raw_m, list):
+                        for item in raw_m:
+                            fn = item.get('filename') or Path(item.get('relative_path', '')).name
+                            if fn:
+                                manifest_data[fn] = item
+                    elif isinstance(raw_m, dict) and "scores_by_composer" in raw_m:
+                        for comp, col_dict in raw_m["scores_by_composer"].items():
+                            for col, file_list in col_dict.items():
+                                for item in file_list:
+                                    fn = item.get('file') or item.get('filename')
+                                    if fn:
+                                        manifest_data[fn] = item
             except Exception:
                 pass
 
@@ -187,42 +216,35 @@ def build_markdown_catalog(scores):
     lines = [
         "# 📚 全局古典与教学钢琴独奏乐谱总索引目录 (Global Piano Solo Catalog)\n",
         f"> **生成时间**：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  ",
-        f"> **乐谱总数**：**{total_count:,}** 首 100% 结构校验纯钢琴独奏 (.mxl)  ",
-        f"> **数据规模**：**{format_bytes(total_size)}** (涵盖 12 大独立数据集)  ",
+        f"> **乐谱总数**：**{total_count:,}** 首 100% 纯钢琴独奏乐谱 (Grand Staff / Single Staff <= 2 Tracks)  ",
+        f"> **数据规模**：**{format_bytes(total_size)}** (涵盖 {len(dataset_groups)} 大权威核心数据集)  ",
         f"> **谱表配置**：🎹 **100% 钢琴双行大谱表 (右手高音谱表 + 左手低音谱表)**  ",
         f"> **版权协议**：**Public Domain / CC0 1.0 / CC BY-NC-SA (全部开源可免授权检索与渲染)**\n",
         "---\n",
-        "## 📑 12 大数据集快速导航\n",
+        "## 📑 核心数据集快速导航\n",
         "| 数据集目录 | 作曲家与代表作品集 | 曲目数量 | 教学与音乐定位 |",
-        "| :--- | :--- | :--- | :--- |",
-        "| [**Czerny**](file:///Users/shiyuli/Dev/Scores/Czerny) | 车尔尼练习曲全套 (Op.599/849/299/740/821) | **380** 首 | 初学入门到演奏级的手指机能与速度进阶 |",
-        "| [**Hanon**](file:///Users/shiyuli/Dev/Scores/Hanon) | 夏尔-路易·哈农《钢琴练指法》(No.01~60) | **60** 首 | 手指独立性、触键力度平衡与双手协调必弹 |",
-        "| [**Burgmuller**](file:///Users/shiyuli/Dev/Scores/Burgmuller) | 布格缪勒《25首简易与进阶练习曲》(Op.100) | **25** 首 | 旋律性与触键表现力兼备的初中级浪漫派名作 |",
-        "| [**Beyer**](file:///Users/shiyuli/Dev/Scores/Beyer) | 费迪南德·拜厄《钢琴初步教程》(Op.101 No.001~106) | **106** 首 | 零基础启蒙识谱与双手并进金标准教材 |",
-        "| [**Bach_Beginner**](file:///Users/shiyuli/Dev/Scores/Bach_Beginner) | 巴赫初级曲集 + 小前奏曲 + 二部创意曲全集 | **61** 首 | 复调音乐入门与中级对位双核触键核心教材 |",
-        "| [**Sonatinas**](file:///Users/shiyuli/Dev/Scores/Sonatinas) | 克莱门蒂Op.36 + 库劳 + 迪亚贝利 + 莫扎特K.545 + 贝多芬Op.49 | **72** 乐章 | 古典奏鸣曲式、阿尔贝蒂低音与快慢乐章对比 |",
-        "| [**Schumann_Album_for_the_Young**](file:///Users/shiyuli/Dev/Scores/Schumann_Album_for_the_Young) | 罗伯特·舒曼《少年曲集》(Op.68 全套43首) | **43** 首 | 浪漫派和声色彩听觉、歌唱性旋律与多声部 |",
-        "| [**Tchaikovsky_Childrens_Album**](file:///Users/shiyuli/Dev/Scores/Tchaikovsky_Childrens_Album) | 柴可夫斯基《儿童钢琴曲集》(Op.39 全套24首) | **24** 首 | 极具民谣色彩与生动画面感的中级名作 |",
-        "| [**Grieg_Lyric_Pieces**](file:///Users/shiyuli/Dev/Scores/Grieg_Lyric_Pieces) | 爱德华·格里格《抒情小品集》(10卷全套66首) | **66** 首 | 洛桑理工 DCMLab 原典版，北欧诗意与细腻弱音 |",
-        "| [**Technique_Studies**](file:///Users/shiyuli/Dev/Scores/Technique_Studies) | 施密特Op.16 + 柯勒 + 贝伦斯Op.70 + 杜弗诺伊Op.120 + 海勒Op.45/46 | **160** 首 | 兼顾机能训练与音乐呼吸的初中级练习曲宝库 |",
-        "| [**KernScores**](file:///Users/shiyuli/Dev/Scores/KernScores) | 斯坦福大学经典名作库 (巴赫、贝多芬、肖邦、莫扎特等) | **3,480** 首 | 历经数十年学术校验的世界顶级乌尔文原典库 |",
-        "| [**OpenScore**](file:///Users/shiyuli/Dev/Scores/OpenScore) | 国际 OpenScore 123 位大师艺术歌曲纯钢琴大谱表独奏版 | **1,420** 首 | 国际同行盲审 CC0 出版级母版，强弱踏板完备 |",
-        "\n---\n"
+        "| :--- | :--- | :--- | :--- |"
     ]
 
-    # Detailed section for each dataset
-    for ds_name, collections in dataset_groups.items():
-        total_ds_scores = sum(len(items) for items in collections.values())
-        lines.append(f"## 📁 数据集：[{ds_name}](file:///Users/shiyuli/Dev/Scores/{ds_name}) (共 {total_ds_scores} 首)\n")
+    for ds_name, collections in sorted(dataset_groups.items()):
+        total_ds = sum(len(items) for items in collections.values())
+        desc_tuple = DATASET_DESCRIPTIONS.get(ds_name, (f"{ds_name} 经典曲目库", "标准数字钢琴独奏乐谱"))
+        lines.append(f"| [**{ds_name}**](file:///Users/shiyuli/Dev/Scores/scores/{ds_name}) | {desc_tuple[0]} | **{total_ds:,}** 首 | {desc_tuple[1]} |")
 
-        for col_name, items in collections.items():
+    lines.append("\n---\n")
+
+    # Detailed section for each dataset
+    for ds_name, collections in sorted(dataset_groups.items()):
+        total_ds_scores = sum(len(items) for items in collections.values())
+        lines.append(f"## 📁 数据集：[{ds_name}](file:///Users/shiyuli/Dev/Scores/scores/{ds_name}) (共 {total_ds_scores:,} 首)\n")
+
+        for col_name, items in sorted(collections.items()):
             first_item = items[0]
             composer_str = first_item.get('composer_cn', first_item.get('composer', ''))
             lines.append(f"### 🎼 作品集：{col_name} ({composer_str}) - 收录 {len(items)} 首\n")
             lines.append("| 序号 | 曲目名称 (Title) | 调性/拍号 | 乐谱文件链接 (.mxl) | 谱表配置 |")
             lines.append("| :--- | :--- | :--- | :--- | :--- |")
 
-            # List all items up to 50 per collection (or all for smaller ones)
             for it in items[:60]:
                 title_display = f"**{it['title']}**"
                 if it.get('title_cn'):

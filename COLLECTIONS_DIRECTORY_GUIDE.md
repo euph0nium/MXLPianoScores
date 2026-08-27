@@ -151,8 +151,8 @@
 
 ## 7. KernScores（斯坦福大学古典大师乌尔文原典库）
 
-* **目录路径**：[KernScores/](file:///Users/shiyuli/Dev/Scores/KernScores)
-* **乐谱数量**：**3,480** 首 `.mxl`
+* **目录路径**：[KernScores/](file:///Users/shiyuli/Dev/Scores/scores/KernScores)
+* **乐谱数量**：**1,221** 首 `.mxl` (纯钢琴独奏 <=2 轨)
 * **主导机构**：斯坦福大学 CCARH (Center for Computer Assisted Research in the Humanities)
 * **品质级别**：⭐️⭐️⭐️⭐️⭐️ **全球学术原典基准库 (Urtext)**
 * **版权状态**：CC BY-NC-SA / Academic Public Domain
@@ -161,9 +161,9 @@
 全球最大、学术准确度最高的公有领域古典音乐数字乐谱库。历经斯坦福大学音乐学者数十年的校对与编码，直接基于德国 *Breitkopf & Härtel*、*Bärenreiter* 等权威乌尔文本录入。
 
 ### 🌟 涵盖大师经典作品
-* **贝多芬 (Beethoven)**：全部 32 首钢琴奏鸣曲（《悲怆》《月光》《暴风雨》《黎明》《热忱》全乐章）与交响曲。
-* **肖邦 (Chopin)**：567 首作品（前奏曲全集 Op.28、马祖卡全集、夜曲全集、练习曲全集等）。
-* **巴赫 (J.S. Bach)**：726 首作品（《平均律键盘曲集》上下两卷全集、赋格的艺术、创意曲等）。
+* **贝多芬 (Beethoven)**：全部钢琴奏鸣曲（《悲怆》《月光》《暴风雨》《黎明》《热忱》全乐章）与变奏曲。
+* **肖邦 (Chopin)**：497 首钢琴独奏作品（前奏曲全集 Op.28、马祖卡全集、夜曲全集、练习曲全集等）。
+* **巴赫 (J.S. Bach)**：键盘作品（《平均律键盘曲集》上下两卷全集、赋格的艺术、创意曲等）。
 * **莫扎特 (Mozart)**：全部钢琴奏鸣曲（K. 331 土耳其进行曲、K. 545 易简奏鸣曲等）。
 * **海顿 (Haydn)**、**斯卡拉蒂 (Scarlatti)**、**乔普林 (Scott Joplin 雷格泰姆爵士钢琴)** 等名家全集。
 
@@ -171,8 +171,8 @@
 
 ## 8. OpenScore（国际同行评审艺术歌曲纯钢琴独奏库）
 
-* **目录路径**：[OpenScore/](file:///Users/shiyuli/Dev/Scores/OpenScore)
-* **乐谱数量**：**1,420** 首 `.mxl`
+* **目录路径**：[OpenScore/](file:///Users/shiyuli/Dev/Scores/scores/OpenScore)
+* **乐谱数量**：**1,413** 首 `.mxl` (纯钢琴独奏 <=2 轨)
 * **主导机构**：国际 OpenScore 计划 (IMSLP + MuseScore Foundation 联合发起)
 * **品质级别**：⭐️⭐️⭐️⭐️⭐️ **出版级同行双重盲审 (Peer-Reviewed)**
 * **版权协议**：**CC0 1.0 Universal (无限制商用 / 放弃全部版权)**
@@ -274,4 +274,4 @@
 * **初学者教学/识谱类 App**：优先接入 `Beyer`、`Bach_Beginner` (初级曲集)、`Czerny` (Op.599)。
 * **考级与古典曲式教学**：接入 `Sonatinas`、`Bach_Beginner` (二部创意曲)、`Czerny` (Op.849/299)。
 * **音乐会与浪漫派演奏**：接入 `Grieg_Lyric_Pieces`、`Schumann_Album_for_the_Young`、`Tchaikovsky_Childrens_Album`。
-* **名家经典欣赏与大师库**：接入 `KernScores` (3,480首) 与 `OpenScore` (1,420首)。
+* **名家经典欣赏与大师库**：接入 `KernScores` (1,221首) 与 `OpenScore` (1,413首)。
